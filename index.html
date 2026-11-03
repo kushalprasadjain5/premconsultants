@@ -1,0 +1,2300 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prem Consultants - Strategic HR & Performance Management Partner</title>
+  <meta name="description"
+    content="Strategic HR & Performance Management Partner for Growing Enterprises. Balanced Scorecards, PMS, OD consulting, and executive talent solutions." />
+  <meta property="og:title" content="Prem Consultants - Strategic HR & Performance Management Partner" />
+  <meta property="og:description"
+    content="Strategic HR & Performance Management Partner for Growing Enterprises. Balanced Scorecards, PMS, OD consulting, and executive talent solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./prem-emblem-hd.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Montserrat (Bold Brand Display), Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Modern Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#2B3990',
+            brandBlueDark: '#1E2B75',
+            brandBlueMid: '#1D4ED8',
+            brandBlueVibrant: '#2563EB',
+            corporate: {
+              950: '#0A1120',
+              900: '#0F172A',
+              850: '#172554',
+              800: '#1E293B',
+              700: '#334155',
+              600: '#475569',
+              500: '#64748B',
+              400: '#94A3B8',
+              300: '#CBD5E1',
+              200: '#E2E8F0',
+              100: '#F1F5F9',
+              50: '#F8FAFC',
+            },
+            growth: {
+              DEFAULT: '#16A34A',
+              light: '#22C55E',
+              dark: '#15803D',
+              subtle: '#DCFCE7',
+              50: '#F0FDF4',
+            }
+          },
+          fontFamily: {
+            brand: ['"Montserrat"', 'system-ui', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          animation: {
+            'marquee': 'marquee 32s linear infinite',
+            'float-icon': 'floatIcon 3s ease-in-out infinite alternate',
+            'pulse-subtle': 'pulseSubtle 2.5s ease-in-out infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            floatIcon: {
+              '0%': { transform: 'translateY(0px)' },
+              '100%': { transform: 'translateY(-6px)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '0.9', transform: 'scale(1)' },
+              '50%': { opacity: '1', transform: 'scale(1.05)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #334155;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nav-light-blur {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background-color: rgba(255, 255, 255, 0.96);
+    }
+
+    /* Ambient Hero Background */
+    .hero-light-pattern {
+      background-color: #FAFAFC;
+      background-image:
+        radial-gradient(at 0% 0%, rgba(43, 57, 144, 0.04) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(22, 163, 74, 0.04) 0px, transparent 50%),
+        radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 30px 30px;
+    }
+
+    /* Iron Shine Animation on the word Strategic */
+    .iron-shine {
+      background: linear-gradient(110deg,
+          #0F172A 15%,
+          #334155 30%,
+          #94A3B8 45%,
+          #FFFFFF 50%,
+          #94A3B8 55%,
+          #334155 70%,
+          #0F172A 85%);
+      background-size: 250% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: ironShineAnim 4s ease-in-out infinite;
+      display: inline-block;
+      font-weight: 900;
+    }
+
+    @keyframes ironShineAnim {
+      0% {
+        background-position: 220% 0;
+      }
+
+      45%,
+      100% {
+        background-position: -220% 0;
+      }
+    }
+
+    /* Attention-Retaining Animation for "How We Serve Better:" */
+    @keyframes serveBetterReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(32px) scale(0.95);
+        filter: blur(5px);
+      }
+
+      60% {
+        transform: translateY(-2px) scale(1.02);
+        filter: blur(0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .serve-better-anim {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity;
+    }
+
+    .serve-better-anim.in-view {
+      opacity: 1;
+      transform: translateY(0);
+      animation: serveBetterReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .serve-better-line {
+      width: 0;
+      height: 4px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #16A34A, #2B3990, #16A34A);
+      margin: 14px auto 0 auto;
+      transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+    }
+
+    .serve-better-anim.in-view+.serve-better-line {
+      width: 140px;
+    }
+
+    /* Animated Service Cards */
+    .service-card-anim {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .service-card-anim:hover {
+      transform: translateY(-8px) scale(1.018);
+      box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.12), 0 0 20px rgba(22, 163, 74, 0.15);
+    }
+
+    .service-card-anim:hover .service-icon {
+      transform: scale(1.15) rotate(4deg);
+      box-shadow: 0 8px 20px -4px rgba(22, 163, 74, 0.3);
+    }
+
+    .service-icon {
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Continuous Marquee - Always Rotating in Any Case */
+    .marquee-inner {
+      animation-play-state: running !important;
+    }
+
+    /* Magnetic CTA Effect */
+    .magnetic-btn {
+      transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.25s ease;
+      will-change: transform;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F8FAFC;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col antialiased selection:bg-growth selection:text-white relative">
+
+  <!-- Interactive Real-time Scroll Progress Bar -->
+  <div id="scroll-progress-bar"
+    class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-[#2B3990] via-growth to-emerald-400 z-60 transition-all duration-75"
+    style="width: 0%;"></div>
+  <header class="sticky top-0 z-50 nav-light-blur border-b border-slate-200/90 shadow-xs transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Brand Identifier: No border on emblem, crisp prominent typography -->
+        <a href="#home" class="flex items-center space-x-3 group focus:outline-none flex-shrink-0 mr-4 lg:mr-6 xl:mr-10"
+          aria-label="Prem Consultants Home">
+          <!-- Logo Emblem with NO Border, NO Box -->
+          <img src="./prem-emblem-hd.png" alt="Prem Consultants Emblem"
+            class="h-11 w-11 sm:h-12 sm:w-12 object-contain transition-transform duration-300 group-hover:scale-105"
+            onerror="this.onerror=null; this.src='./prem-full-logo.png';" />
+
+          <div class="flex flex-col">
+            <div class="flex items-baseline space-x-1.5 leading-none">
+              <!-- Clear bold font for PREM in rich Royal Blue -->
+              <span class="font-brand font-black text-xl sm:text-2xl tracking-tight text-[#2B3990]">PREM</span>
+              <!-- Clear bold font for CONSULTANTS in vibrant Green -->
+              <span class="font-brand font-black text-xl sm:text-2xl tracking-tight text-[#16A34A]">CONSULTANTS</span>
+            </div>
+            <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-bold text-slate-500 mt-1">
+              Enabling Out Performance
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items with Clean Spacing -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 xl:space-x-3" aria-label="Main Navigation">
+          <a href="#home"
+            class="nav-link px-3.5 py-2 text-sm xl:text-base font-bold text-slate-700 hover:text-[#2B3990] hover:bg-slate-100/80 rounded-xl transition-all">Home</a>
+          <a href="#services"
+            class="nav-link px-3.5 py-2 text-sm xl:text-base font-bold text-slate-700 hover:text-[#2B3990] hover:bg-slate-100/80 rounded-xl transition-all">Services</a>
+          <a href="#why-us"
+            class="nav-link px-3.5 py-2 text-sm xl:text-base font-bold text-slate-700 hover:text-[#2B3990] hover:bg-slate-100/80 rounded-xl transition-all">Why
+            Us</a>
+          <a href="#clients"
+            class="nav-link px-3.5 py-2 text-sm xl:text-base font-bold text-slate-700 hover:text-[#2B3990] hover:bg-slate-100/80 rounded-xl transition-all">Clients</a>
+          <a href="#about-us"
+            class="nav-link px-3.5 py-2 text-sm xl:text-base font-bold text-slate-700 hover:text-[#2B3990] hover:bg-slate-100/80 rounded-xl transition-all">Leadership</a>
+          <!-- Contact Us Surrounded in a Green Box (No Symbol) -->
+          <a href="#contact-us"
+            class="px-4 py-2 text-sm xl:text-base font-bold text-white bg-growth hover:bg-growth-dark border border-growth rounded-xl transition-all shadow-xs hover:shadow-md hover:shadow-growth/20 inline-flex items-center justify-center">
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center md:hidden">
+          <button type="button" id="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false"
+            class="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">
+            <svg id="menu-icon-open" class="h-6 w-6 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-2">
+      <a href="#home"
+        class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:text-[#2B3990] hover:bg-slate-50">Home</a>
+      <a href="#services"
+        class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:text-[#2B3990] hover:bg-slate-50">Services</a>
+      <a href="#why-us"
+        class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:text-[#2B3990] hover:bg-slate-50">Why
+        Us</a>
+      <a href="#clients"
+        class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:text-[#2B3990] hover:bg-slate-50">Clients</a>
+      <a href="#about-us"
+        class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:text-[#2B3990] hover:bg-slate-50">Leadership</a>
+      <!-- Contact Us Surrounded in a Green Box (Mobile) -->
+      <a href="#contact-us"
+        class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-bold text-white bg-growth hover:bg-growth-dark text-center transition-all shadow-xs">
+        Contact Us
+      </a>
+    </div>
+  </header>
+
+
+  <!-- ========================================================================= -->
+  <!-- B. HERO SECTION (IRON SHINE ON STRATEGIC, NO UNDERLINE, COUNTING NUMBERS) -->
+  <!-- ========================================================================= -->
+  <section id="home" class="relative pt-14 pb-20 sm:pt-20 sm:pb-28 hero-light-pattern overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+
+      <!-- Eyebrow Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200/90 text-xs font-semibold text-slate-700 shadow-2xs">
+        <span class="w-2 h-2 rounded-full bg-growth animate-pulse"></span>
+        <span class="tracking-wide">Strategic HR & Business Advisory | Estd. 2014</span>
+      </div>
+
+      <!-- Main Headline: "Strategic" with Iron Shine Animation, "Partner" in Green without Underline -->
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.14] font-display max-w-4xl mx-auto">
+        <span class="iron-shine">Strategic</span> HR & Performance Management <span
+          class="text-[#16A34A] font-black">Partner</span> for Growing Enterprises
+      </h1>
+
+      <!-- Value Proposition Sub-Headline -->
+      <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto font-normal leading-relaxed">
+        We partner with Promoters, Managing Directors, and Corporate Leaders across Automobile, Engineering, IT, and
+        Infrastructure to align business strategy with daily workforce execution. Through institutionalized Balanced
+        Scorecards, robust PMS, and targeted talent solutions, we build high-accountability organizations with a proven
+        track record of enabling business scale.
+      </p>
+
+      <!-- Primary Action Buttons -->
+      <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact-us" onclick="switchInquiryTab('client');"
+          class="magnetic-btn w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-white bg-growth hover:bg-growth-dark transition-all shadow-md hover:shadow-lg hover:shadow-growth/25 flex items-center justify-center gap-2.5">
+          <span>Request Strategic Discovery Session</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+
+        <a href="#contact-us" onclick="switchInquiryTab('candidate');"
+          class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 hover:border-slate-400 transition-all shadow-2xs flex items-center justify-center gap-2">
+          <span>Explore Careers & Job Openings</span>
+        </a>
+      </div>
+
+      <!-- Hero Trust Highlights: COUNTING UP 25+ Years, 100% Free, Pan-India in BLUE + Light Grey Labels -->
+      <div id="hero-stats-row" class="pt-8 max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-5">
+
+        <!-- Metric 1: Counting 25+ Years in Blue, Light Grey Text Below -->
+        <div
+          class="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-lg hover:-translate-y-1 transition-all group cursor-default">
+          <div
+            class="text-3xl sm:text-4xl font-black text-[#2B3990] font-display flex items-center justify-center tracking-tight">
+            <span class="counter-number inline-block tabular-nums" data-target="25">0</span><span
+              class="text-[#2B3990] font-black">+ Years</span>
+          </div>
+          <div class="text-xs text-slate-400 font-semibold tracking-wider uppercase mt-2">
+            Market Experience
+          </div>
+        </div>
+
+        <!-- Metric 2: Counting 100% Free in Blue, Light Grey Text Below -->
+        <div
+          class="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-lg hover:-translate-y-1 transition-all group cursor-default">
+          <div
+            class="text-3xl sm:text-4xl font-black text-[#2B3990] font-display flex items-center justify-center tracking-tight">
+            <span class="counter-number inline-block tabular-nums" data-target="100">0</span><span
+              class="text-[#2B3990] font-black">% Free</span>
+          </div>
+          <div class="text-xs text-slate-400 font-semibold tracking-wider uppercase mt-2">
+            Placement for Candidates
+          </div>
+        </div>
+
+        <!-- Metric 3: Pan-India in Blue, Light Grey Text Below -->
+        <div
+          class="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-lg hover:-translate-y-1 transition-all group cursor-default">
+          <div
+            class="text-3xl sm:text-4xl font-black text-[#2B3990] font-display flex items-center justify-center tracking-tight">
+            Pan-India
+          </div>
+          <div class="text-xs text-slate-400 font-semibold tracking-wider uppercase mt-2">
+            Enterprise Client Reach
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- C. CLIENT SECTION (PRESTIGIOUS MIDNIGHT NAVY COLOR STRIP, LARGE CIRCLES) -->
+  <!-- ========================================================================= -->
+  <section id="clients"
+    class="py-14 bg-gradient-to-r from-[#0C1E38] via-[#102A4E] to-[#0C1E38] text-white border-y-2 border-[#1E3A8A]/50 overflow-hidden relative shadow-inner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center space-y-2">
+      <span
+        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-white/15">
+        Enterprise Credentials
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight">
+        Trusted by Industry Leaders Across Key Sectors
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-300 font-medium">
+        From automotive giants and global electronics to renewable energy and infrastructure EPCs
+      </p>
+    </div>
+
+    <!-- Infinite Scrolling Marquee Track on Rich Midnight Navy Strip -->
+    <div class="relative w-full overflow-hidden marquee-track py-3" id="marquee-track">
+      <!-- Contrast edge fades -->
+      <div
+        class="absolute left-0 top-0 bottom-0 w-28 bg-gradient-to-r from-[#0C1E38] to-transparent z-10 pointer-events-none">
+      </div>
+      <div
+        class="absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-[#0C1E38] to-transparent z-10 pointer-events-none">
+      </div>
+
+      <!-- Moving Curated Company Logos (Large White Circles, Clear White Names Below) -->
+      <div class="flex whitespace-nowrap py-2 items-center" id="marquee-inner" style="will-change:transform;">
+
+        <!-- Track Set 1 -->
+        <!-- 1. Mahindra Rise -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M22 68L38 32H48L50 44L52 32H62L78 68H66L58 48L54 68H46L42 48L34 68H22Z" fill="#D32F2F" />
+              <path d="M46 64H54L50 54L46 64Z" fill="#D32F2F" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-red-400 tracking-tight mt-3 transition-colors">Mahindra
+            Rise</span>
+          <span class="text-xs font-semibold text-slate-300">Automotive & Financial</span>
+        </div>
+
+        <!-- 2. Ashoka Buildcon -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M50 20L25 72H40L50 48L60 72H75L50 20Z" fill="#1E3A8A" />
+              <circle cx="50" cy="38" r="5" fill="#F59E0B" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">Ashoka
+            Buildcon</span>
+          <span class="text-xs font-semibold text-slate-300">Infrastructure EPC</span>
+        </div>
+
+        <!-- 3. Waaree Solar -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="16" fill="#D97706" />
+              <path d="M50 20V28M50 72V80M20 50H28M72 50H80M29 29L35 35M65 65L71 71M71 29L65 35M35 65L29 71"
+                stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">Waaree
+            Solar</span>
+          <span class="text-xs font-semibold text-slate-300">Renewable Energy</span>
+        </div>
+
+        <!-- 4. Sahyadri Farms -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M50 25C38 35 34 52 42 66C52 68 66 60 66 45C66 32 50 25 50 25Z" fill="#16A34A" />
+              <circle cx="44" cy="52" r="5" fill="#86EFAC" />
+              <circle cx="54" cy="46" r="4" fill="#86EFAC" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-emerald-400 tracking-tight mt-3 transition-colors">Sahyadri
+            Farms</span>
+          <span class="text-xs font-semibold text-slate-300">Agritech & Food</span>
+        </div>
+
+        <!-- 5. TDK / EPCOS -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <rect x="20" y="38" width="60" height="24" rx="4" fill="#1E40AF" />
+              <text x="50" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14"
+                fill="white" text-anchor="middle">TDK</text>
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">TDK
+            / EPCOS</span>
+          <span class="text-xs font-semibold text-slate-300">Electronics Components</span>
+        </div>
+
+        <!-- 6. Bedmutha Industries -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <polygon points="50,22 76,37 76,67 50,82 24,67 24,37" stroke="#334155" stroke-width="4" fill="none" />
+              <circle cx="50" cy="52" r="8" fill="#1E293B" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-slate-200 tracking-tight mt-3 transition-colors">Bedmutha
+            Industries</span>
+          <span class="text-xs font-semibold text-slate-300">Heavy Engineering & Steel</span>
+        </div>
+
+        <!-- 7. EPL Contractors -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M30 70V30H70V40H42V46H66V54H42V70H30Z" fill="#B45309" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">EPL
+            Contractors</span>
+          <span class="text-xs font-semibold text-slate-300">Engineers & Contractors</span>
+        </div>
+
+        <!-- Track Set 2 (Perfect Duplicate for Seamless Infinite Marquee) -->
+        <!-- 1. Mahindra Rise -->
+        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M22 68L38 32H48L50 44L52 32H62L78 68H66L58 48L54 68H46L42 48L34 68H22Z" fill="#D32F2F" />
+              <path d="M46 64H54L50 54L46 64Z" fill="#D32F2F" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-red-400 tracking-tight mt-3 transition-colors">Mahindra
+            Rise</span>
+          <span class="text-xs font-semibold text-slate-300">Automotive &amp; Financial</span>
+        </div>
+        <!-- 2. Ashoka Buildcon -->
+        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M50 20L25 72H40L50 48L60 72H75L50 20Z" fill="#1E3A8A" />
+              <circle cx="50" cy="38" r="5" fill="#F59E0B" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">Ashoka
+            Buildcon</span>
+          <span class="text-xs font-semibold text-slate-300">Infrastructure EPC</span>
+        </div>
+        <!-- 3. Waaree Solar -->
+        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="16" fill="#D97706" />
+              <path d="M50 20V28M50 72V80M20 50H28M72 50H80M29 29L35 35M65 65L71 71M71 29L65 35M35 65L29 71"
+                stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">Waaree
+            Solar</span>
+          <span class="text-xs font-semibold text-slate-300">Renewable Energy</span>
+        </div>
+        <!-- 4. Sahyadri Farms -->
+        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M50 25C38 35 34 52 42 66C52 68 66 60 66 45C66 32 50 25 50 25Z" fill="#16A34A" />
+              <circle cx="44" cy="52" r="5" fill="#86EFAC" />
+              <circle cx="54" cy="46" r="4" fill="#86EFAC" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-emerald-400 tracking-tight mt-3 transition-colors">Sahyadri
+            Farms</span>
+          <span class="text-xs font-semibold text-slate-300">Agritech &amp; Food</span>
+        </div>
+        <!-- 5. TDK / EPCOS -->
+        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <rect x="20" y="38" width="60" height="24" rx="4" fill="#1E40AF" />
+              <text x="50" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14"
+                fill="white" text-anchor="middle">TDK</text>
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">TDK
+            / EPCOS</span>
+          <span class="text-xs font-semibold text-slate-300">Electronics Components</span>
+        </div>
+        <!-- 6. Bedmutha Industries -->
+        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <polygon points="50,22 76,37 76,67 50,82 24,67 24,37" stroke="#334155" stroke-width="4" fill="none" />
+              <circle cx="50" cy="52" r="8" fill="#1E293B" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-slate-200 tracking-tight mt-3 transition-colors">Bedmutha
+            Industries</span>
+          <span class="text-xs font-semibold text-slate-300">Heavy Engineering &amp; Steel</span>
+        </div>
+        <!-- 7. EPL Contractors -->
+        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
+              <path d="M30 70V30H70V40H42V46H66V54H42V70H30Z" fill="#B45309" />
+            </svg>
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">EPL
+            Contractors</span>
+          <span class="text-xs font-semibold text-slate-300">Engineers &amp; Contractors</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- D. CORE SOLUTIONS SUITE (SPACIOUS GAP, INTERACTIVE FILTER, ATTRACTIVE CARDS) -->
+  <!-- ========================================================================= -->
+  <section id="services"
+    class="pt-28 sm:pt-36 pb-32 sm:pb-40 bg-slate-50 border-b border-slate-200 relative overflow-hidden">
+
+    <!-- Subtle ambient background accents to make the section visually attractive -->
+    <div class="absolute -left-20 top-20 w-96 h-96 bg-growth/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -right-20 bottom-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header with Increased Gap from Clients Section -->
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+        <span
+          class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-growth-subtle text-growth-dark text-xs font-bold uppercase tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-growth"></span>
+          Core Services & Solutions
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 font-display tracking-tight">
+          Practical Solutions to Run Your Business with Complete Clarity
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          We eliminate daily people-firefighting, align your staff with company revenue goals, and build disciplined
+          monthly review habits.
+        </p>
+      </div>
+
+      <!-- 4 Animated, Highly Attractive Service Blocks in Simple Language -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7" id="services-grid">
+
+        <!-- Service Block 1: PMS (Flagship, 2x-3x claim removed) -->
+        <div
+          class="service-card-anim bg-white rounded-2xl border-2 border-growth/40 p-7 flex flex-col justify-between shadow-xs overflow-hidden group">
+          <div
+            class="absolute top-0 right-0 bg-growth text-white text-[10px] font-extrabold px-3 py-1 rounded-bl-xl uppercase tracking-wider shadow-2xs">
+            Flagship
+          </div>
+          <div>
+            <div
+              class="service-icon w-14 h-14 rounded-2xl bg-growth-subtle text-growth-dark flex items-center justify-center mb-6 shadow-xs">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                </path>
+              </svg>
+            </div>
+
+            <!-- Professional Domain Tag: 2x-3x claim removed -->
+            <div
+              class="inline-block px-2.5 py-0.5 rounded-md bg-growth/10 text-growth-dark text-[11px] font-bold uppercase tracking-wider mb-2">
+              Goal & KPI Architecture
+            </div>
+
+            <h3
+              class="text-lg font-bold text-slate-900 group-hover:text-growth-dark transition-colors mb-2 font-display leading-snug">
+              Performance Management Systems (PMS)
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-5">
+              Stop daily follow-ups. Give every employee clear monthly targets and scorecards so your business
+              operations run smoothly and objectively.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-700 font-medium pb-2">
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-growth-subtle text-growth-dark flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Clear Scorecards for Every Department & Plant</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-growth-subtle text-growth-dark flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>100% Objective Appraisals (Zero Bias)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-growth-subtle text-growth-dark flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Monthly Results Review Cadence (MBR)</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" onclick="openServiceModal('pms')"
+            class="w-full mt-6 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-900 hover:bg-growth text-white font-bold text-xs tracking-wide transition-all shadow-xs group-hover:shadow-md">
+            <span>Explore Deliverables</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Service Block 2: HR Process Consulting & OD -->
+        <div
+          class="service-card-anim bg-white rounded-2xl border border-slate-200/90 p-7 flex flex-col justify-between shadow-xs hover:border-[#2B3990] overflow-hidden group"
+          data-category="promoters operations">
+          <div>
+            <div
+              class="service-icon w-14 h-14 rounded-2xl bg-blue-50 text-[#2B3990] flex items-center justify-center mb-6 shadow-xs">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                </path>
+              </svg>
+            </div>
+
+            <div
+              class="inline-block px-2.5 py-0.5 rounded-md bg-blue-50 text-[#2B3990] text-[11px] font-bold uppercase tracking-wider mb-2">
+              Org Structure & Roles
+            </div>
+
+            <h3
+              class="text-lg font-bold text-slate-900 group-hover:text-[#2B3990] transition-colors mb-2 font-display leading-snug">
+              HR Process Consulting & OD
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-5">
+              Define who does what. Establish clear job roles, reporting chains, and SOPs so your team works
+              independently without constant promoter intervention.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-700 font-medium pb-2">
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-blue-100 text-[#2B3990] flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Written Job Descriptions (JDs) for All Roles</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-blue-100 text-[#2B3990] flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Clear Promotion & Hierarchy Rules</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-blue-100 text-[#2B3990] flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Practical Plant & Corporate HR SOPs</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" onclick="openServiceModal('od')"
+            class="w-full mt-6 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 hover:bg-[#2B3990] hover:text-white text-slate-900 font-bold text-xs tracking-wide transition-all">
+            <span>Explore Deliverables</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Service Block 3: Corporate Training & Coaching -->
+        <div
+          class="service-card-anim bg-white rounded-2xl border border-slate-200/90 p-7 flex flex-col justify-between shadow-xs hover:border-amber-500 overflow-hidden group"
+          data-category="operations">
+          <div>
+            <div
+              class="service-icon w-14 h-14 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-6 shadow-xs">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                </path>
+              </svg>
+            </div>
+
+            <div
+              class="inline-block px-2.5 py-0.5 rounded-md bg-amber-50 text-amber-700 text-[11px] font-bold uppercase tracking-wider mb-2">
+              Managerial Leadership
+            </div>
+
+            <h3
+              class="text-lg font-bold text-slate-900 group-hover:text-amber-700 transition-colors mb-2 font-display leading-snug">
+              Corporate Training & Coaching
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-5">
+              Turn supervisors and plant managers into confident leaders who communicate clearly, resolve team
+              conflicts, and solve problems proactively.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-700 font-medium pb-2">
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Supervisor Leadership & Dialogue Skills</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Conflict Resolution & Team Alignment</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Practical MS Excel Analytics for Managers</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" onclick="openServiceModal('training')"
+            class="w-full mt-6 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 hover:bg-amber-600 hover:text-white text-slate-900 font-bold text-xs tracking-wide transition-all">
+            <span>Explore Deliverables</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Service Block 4: Strategic Talent Acquisition -->
+        <div
+          class="service-card-anim bg-white rounded-2xl border border-slate-200/90 p-7 flex flex-col justify-between shadow-xs hover:border-purple-600 overflow-hidden group"
+          data-category="talent">
+          <div>
+            <div
+              class="service-icon w-14 h-14 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center mb-6 shadow-xs">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z">
+                </path>
+              </svg>
+            </div>
+
+            <div
+              class="inline-block px-2.5 py-0.5 rounded-md bg-purple-50 text-purple-700 text-[11px] font-bold uppercase tracking-wider mb-2">
+              Zero Candidate Fees
+            </div>
+
+            <h3
+              class="text-lg font-bold text-slate-900 group-hover:text-purple-700 transition-colors mb-2 font-display leading-snug">
+              Strategic Talent Acquisition
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed mb-5">
+              Hire top-tier technical, engineering, and plant heads. We evaluate candidates thoroughly on real skill and
+              culture fit, with zero fees charged to candidates.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-700 font-medium pb-2">
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Plant Head & Executive Search</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>Mechanical, Electrical & Quality Engineers</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-4 h-4 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-[10px]">&#10004;</span>
+                <span>100% Free Placement for Candidates</span>
+              </li>
+            </ul>
+          </div>
+
+          <button type="button" onclick="openServiceModal('recruitment')"
+            class="w-full mt-6 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-100 hover:bg-purple-600 hover:text-white text-slate-900 font-bold text-xs tracking-wide transition-all">
+            <span>Explore Deliverables</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- E. "WHY US" (INCREASED GAP, ATTENTION-RETAINING ANIMATED HEADING) -->
+  <!-- ========================================================================= -->
+  <section id="why-us"
+    class="pt-32 sm:pt-40 pb-32 sm:pb-36 bg-white border-b border-slate-200 overflow-hidden relative">
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header with Eye-Catching Animated Presentation for "How We Serve Better:" -->
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+        <div class="flex justify-center mb-3.5">
+          <span
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider border border-slate-200">
+            <span class="w-2 h-2 rounded-full bg-growth"></span>
+            Why Prem Consultants
+          </span>
+        </div>
+
+        <!-- Attention-Retaining Heading Animation with Animated Accent Line -->
+        <div class="relative block">
+          <h2 id="serve-better-heading"
+            class="serve-better-anim text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 font-display tracking-tight">
+            How We Serve Better:
+          </h2>
+          <div class="serve-better-line"></div>
+        </div>
+
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto pt-3">
+          The practical differences that make our engagements deliver sustainable operational results.
+        </p>
+      </div>
+
+      <!-- 4 Core Grounded Points -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Point 1 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:shadow-md transition-all flex gap-4 items-start">
+          <div
+            class="w-10 h-10 rounded-xl bg-growth-subtle text-growth-dark flex items-center justify-center font-extrabold text-sm flex-shrink-0 mt-0.5">
+            01
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 mb-1.5 font-display">
+              Dual-Domain Engineering & HR Expertise
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Founded by an engineering and HR management professional with hands-on shop-floor operations experience.
+              We understand machine utilization, cycle times, and scrap rates just as clearly as goal sheets and
+              performance appraisals.
+            </p>
+          </div>
+        </div>
+
+        <!-- Point 2 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:shadow-md transition-all flex gap-4 items-start">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-100 text-[#2B3990] flex items-center justify-center font-extrabold text-sm flex-shrink-0 mt-0.5">
+            02
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 mb-1.5 font-display">
+              On-Site Operational Immersion
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              We don't provide remote advice from a distance. We spend time inside your facilities, interact with line
+              managers, and understand ground realities so that performance systems are practical, accepted, and
+              followed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Point 3 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:shadow-md transition-all flex gap-4 items-start">
+          <div
+            class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-extrabold text-sm flex-shrink-0 mt-0.5">
+            03
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 mb-1.5 font-display">
+              End-to-End Review Cadence (MBR)
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              We stay beyond policy drafting. We facilitate structured Management By Results (MBR) review coaching
+              sessions with your department heads to make goal review, feedback, and accountability a routine
+              organizational habit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Point 4 -->
+        <div
+          class="p-6 rounded-2xl border border-slate-200 bg-slate-50/70 hover:bg-white hover:shadow-md transition-all flex gap-4 items-start">
+          <div
+            class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-extrabold text-sm flex-shrink-0 mt-0.5">
+            04
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 mb-1.5 font-display">
+              Unlocking Growth Capacity for Promoters
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              By institutionalizing objective KPIs and delegation structures, we relieve business promoters and managing
+              directors from daily people-firefighting, giving them the freedom to focus on strategic market expansion.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- F. ABOUT US / LEADERSHIP ("Co-Founder, Recruitment Head, Trainer") -->
+  <!-- ========================================================================= -->
+  <section id="about-us" class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span
+          class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 text-white text-xs font-bold uppercase tracking-wider">
+          About Us & Leadership
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display tracking-tight">
+          Executive Leadership with Industrial Roots
+        </h2>
+        <p class="text-base text-slate-600">
+          Founded and led by senior practitioners combining engineering discipline, XLRI HR credentials, and talent
+          leadership.
+        </p>
+      </div>
+
+      <!-- 2-Column Founder Showcase -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+        <!-- Founder 1: Prasad Jain -->
+        <div
+          class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-8 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-5 border-b border-slate-100">
+              <div
+                class="relative w-24 h-24 sm:w-26 sm:h-26 rounded-2xl overflow-hidden border border-slate-200 flex-shrink-0 bg-slate-100">
+                <img src="./prasad-jain.png" alt="Prasad Jain - Founder & Principal Consultant"
+                  class="w-full h-full object-cover object-top"
+                  onerror="this.onerror=null; this.src='./assets/aistudio/Professional_Office_Portrait_with_Greenery_17d4e0d3.png';" />
+              </div>
+              <div class="space-y-1">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-growth-dark">Founder & Principal
+                  Consultant</div>
+                <h3 class="text-2xl font-extrabold text-slate-900 font-display">Prasad Jain</h3>
+                <p class="text-xs sm:text-sm font-semibold text-slate-700">
+                  B.E. (Mechanical) | Executive Diploma in HRM (XLRI Jamshedpur)
+                </p>
+                <div class="text-xs text-[#2B3990] font-bold pt-0.5">
+                  Ex-Manager HR, Mahindra & Mahindra Financial Services Ltd
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-5 space-y-3">
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Prasad brings over <strong>17+ years</strong> of dual-domain industry experience spanning Human Resource
+                Development and Production/Shop-Floor Operations across Automobile, Heavy Engineering, and IT sectors.
+              </p>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Specialist in bridging promoter vision with structured operational execution, Balanced Scorecards,
+                Management By Results (MBR), and rating normalization models.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Balanced
+                  Scorecard (BSC)</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">PMS
+                  Architecture</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">MBR
+                  Reviews</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">TPM & ISO/TS
+                  16949</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Advisory Inquiries</span>
+            <a href="mailto:prasad.jain@premconsultant.com"
+              class="font-bold text-[#2B3990] hover:text-growth flex items-center gap-1">
+              prasad.jain@premconsultant.com
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Founder 2: Deepali Jain (Role: Co-Founder, Recruitment Head, Trainer) -->
+        <div
+          class="bg-white rounded-2xl border border-slate-200 p-7 sm:p-8 shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-5 border-b border-slate-100">
+              <div
+                class="relative w-24 h-24 sm:w-26 sm:h-26 rounded-2xl overflow-hidden border border-slate-200 flex-shrink-0 bg-slate-100">
+                <img src="./deepali-jain.png" alt="Deepali Jain - Co-Founder, Recruitment Head, Trainer"
+                  class="w-full h-full object-cover object-top"
+                  onerror="this.onerror=null; this.src='./assets/aistudio/Smiling_Professional_in_Black_Blazer_4194ab60.png';" />
+              </div>
+              <div class="space-y-1">
+                <!-- EXACT ROLE DESIGNATION REQUESTED (Green matching Founder & Principal Consultant) -->
+                <div class="text-[11px] font-bold uppercase tracking-wider text-growth-dark">Co-Founder, Recruitment
+                  Head, Trainer</div>
+                <h3 class="text-2xl font-extrabold text-slate-900 font-display">Deepali Jain</h3>
+                <p class="text-xs sm:text-sm font-semibold text-slate-700">
+                  M.Com | Executive MBA in Human Resource Management (HRM)
+                </p>
+                <div class="text-xs font-bold pt-0.5 text-[#2B3990]" style="color: #2b3990;">
+                  Leader of 100% Free Candidate Placement Charter
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-5 space-y-3">
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Co-founder steering the executive recruitment practice and corporate training sessions. Expert in
+                identifying high-caliber technical, manufacturing, and operational leadership.
+              </p>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Conducts practical workshops in managerial communication, soft skills, team alignment, and oversees
+                candidate relations with strict zero-fee ethics.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Technical & Plant
+                  Staffing</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Executive
+                  Search</span>
+                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">Workplace
+                  Communication</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Talent Practice Inquiries</span>
+            <a href="#contact-us" onclick="switchInquiryTab('candidate');"
+              class="font-bold text-slate-900 hover:text-growth flex items-center gap-1">
+              Candidate Portal
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Network Credential Banner -->
+      <div
+        class="mt-10 p-5 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 max-w-5xl mx-auto shadow-2xs">
+        <div class="flex items-center gap-3.5 text-center sm:text-left">
+          <div
+            class="w-10 h-10 rounded-xl bg-growth-subtle text-growth-dark flex items-center justify-center flex-shrink-0 font-bold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-slate-900">Pan-India Execution Ecosystem</h4>
+            <p class="text-xs text-slate-500 mt-0.5">Supported by an experienced network of functional HR associates,
+              technical recruiters, and industrial trainers across industrial corridors nationwide.</p>
+          </div>
+        </div>
+        <a href="#contact-us"
+          class="flex-shrink-0 px-4 py-2 rounded-lg bg-slate-900 hover:bg-growth text-white font-bold text-xs transition-colors">
+          Connect With Us
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- G. CONTACT US ("Get in Touch with Us!") -->
+  <!-- ========================================================================= -->
+  <section id="contact-us" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <span
+          class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-growth-subtle text-growth-dark text-xs font-bold uppercase tracking-wider">
+          Let's Talk
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display tracking-tight">
+          Get in Touch with Us!
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Whether you want to discuss performance systems for your company or submit your profile for career
+          opportunities, we are here to help.
+        </p>
+      </div>
+
+      <!-- Segmented Tab Controls -->
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200" role="tablist">
+          <button type="button" id="tab-client" role="tab" aria-selected="true" aria-controls="panel-client"
+            onclick="switchInquiryTab('client');"
+            class="inquiry-tab-btn active px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 bg-white text-slate-900 shadow-xs flex items-center gap-2">
+            <svg class="w-4 h-4 text-growth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+              </path>
+            </svg>
+            <span>For Organizations (Clients)</span>
+          </button>
+          <button type="button" id="tab-candidate" role="tab" aria-selected="false" aria-controls="panel-candidate"
+            onclick="switchInquiryTab('candidate');"
+            class="inquiry-tab-btn px-6 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 transition-all duration-200 flex items-center gap-2">
+            <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+            <span>For Job Seekers (Candidates)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Panels Container -->
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-xs">
+
+        <!-- TAB 1: FOR CLIENT ORGANIZATIONS -->
+        <div id="panel-client" role="tabpanel" aria-labelledby="tab-client" class="space-y-6">
+          <div class="border-b border-slate-200 pb-4">
+            <h3 class="text-lg font-bold text-slate-900 font-display">Schedule a Strategic Discovery Discussion</h3>
+            <p class="text-xs text-slate-600 mt-1">Discuss your corporate targets, PMS requirements, or organization
+              restructuring with Prasad Jain.</p>
+          </div>
+
+          <!-- Success Alert Container -->
+          <div id="client-success-alert"
+            class="hidden p-4 rounded-xl bg-growth-subtle border border-growth text-growth-dark text-sm space-y-2">
+            <div class="flex items-center gap-2 font-bold text-base">
+              <svg class="w-5 h-5 text-growth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Consultation Request Received!</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Thank you. Prasad Jain will review your organization context and get back to you within 24 hours.
+            </p>
+            <div class="pt-1">
+              <a id="client-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-growth text-white text-xs font-bold hover:bg-growth-dark transition-colors shadow-2xs">
+                <span>Direct WhatsApp Confirmation</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <form id="client-inquiry-form" onsubmit="handleClientSubmit(event);" novalidate class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+              <div>
+                <label for="client-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Full Name <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="client-name" name="fullName" required placeholder="e.g. Rajesh Patil"
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-growth focus:ring-2 focus:ring-growth/20 bg-white text-slate-900 text-sm transition-all" />
+                <p id="err-client-name" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+              </div>
+
+              <div>
+                <label for="client-company"
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Company Name & City <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="client-company" name="companyName" required
+                  placeholder="e.g. Apex Auto Components, Nashik"
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-growth focus:ring-2 focus:ring-growth/20 bg-white text-slate-900 text-sm transition-all" />
+                <p id="err-client-company" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+              </div>
+
+              <div>
+                <label for="client-contact"
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Work Email or WhatsApp Number <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="client-contact" name="contact" required
+                  placeholder="e.g. rajesh@apexauto.in or 9822012345"
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-growth focus:ring-2 focus:ring-growth/20 bg-white text-slate-900 text-sm transition-all" />
+                <p id="err-client-contact" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+              </div>
+
+              <div>
+                <label for="client-service"
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Service Required <span class="text-red-500">*</span>
+                </label>
+                <select id="client-service" name="service" required
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-growth focus:ring-2 focus:ring-growth/20 bg-white text-slate-900 text-sm transition-all">
+                  <option value="">Select a Consulting Focus Area</option>
+                  <option value="Performance Management Systems (PMS)">Performance Management Systems (PMS)</option>
+                  <option value="HR Process Consulting & OD">HR Process Consulting & OD</option>
+                  <option value="Corporate Training & Capability Building">Corporate Training & Capability Building
+                  </option>
+                  <option value="Strategic Talent Acquisition & Recruitment">Strategic Talent Acquisition & Recruitment
+                  </option>
+                  <option value="General Strategic Advisory">General Strategic Advisory</option>
+                </select>
+                <p id="err-client-service" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+              </div>
+
+            </div>
+
+            <div>
+              <label for="client-notes" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                Brief Scope or Context <span class="text-slate-400 font-normal lowercase">(optional)</span>
+              </label>
+              <textarea id="client-notes" name="notes" rows="3"
+                placeholder="Number of employees, plant location, key pain points or targets..."
+                class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-growth focus:ring-2 focus:ring-growth/20 bg-white text-slate-900 text-sm transition-all"></textarea>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="text-xs text-slate-500 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-growth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                  </path>
+                </svg>
+                <span>Confidential advisory protocol. Zero spam.</span>
+              </div>
+              <button type="submit" id="btn-submit-client"
+                class="magnetic-btn w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-growth hover:bg-growth-dark transition-all shadow-md hover:shadow-growth/20 focus:ring-2 focus:ring-growth focus:ring-offset-2">
+                Request Consultation
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+
+        <!-- TAB 2: FOR JOB SEEKERS -->
+        <div id="panel-candidate" role="tabpanel" aria-labelledby="tab-candidate" class="hidden space-y-6">
+
+          <div class="p-4 rounded-xl bg-purple-50 border border-purple-200 flex items-start gap-3">
+            <div
+              class="w-7 h-7 rounded-full bg-purple-600 text-white flex items-center justify-center flex-shrink-0 font-bold text-xs mt-0.5">
+              &#10004;
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-purple-950">100% Free Placement Guarantee</h4>
+              <p class="text-xs text-purple-900 leading-relaxed mt-0.5">
+                Prem Consultants never charges job seekers any fees. All staffing services are employer-sponsored.
+              </p>
+            </div>
+          </div>
+
+          <!-- Success Alert Container -->
+          <div id="candidate-success-alert"
+            class="hidden p-4 rounded-xl bg-purple-50 border border-purple-300 text-purple-950 text-sm space-y-2">
+            <div class="flex items-center gap-2 font-bold text-base text-purple-800">
+              <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Application Submitted Successfully!</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Our Talent Acquisition team under Deepali Jain will review your profile against active mandates.
+            </p>
+            <div class="pt-1">
+              <a id="candidate-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-purple-700 text-white text-xs font-bold hover:bg-purple-800 transition-colors shadow-2xs">
+                <span>Notify Talent Team via WhatsApp</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <form id="candidate-inquiry-form" onsubmit="handleCandidateSubmit(event);" novalidate class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+              <div>
+                <label for="cand-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Full Name <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="cand-name" name="fullName" required placeholder="e.g. Sunil Deshmukh"
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 bg-white text-slate-900 text-sm transition-all" />
+                <p id="err-cand-name" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+              </div>
+
+              <div>
+                <label for="cand-contact"
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Mobile / WhatsApp Number or Email <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="cand-contact" name="contact" required
+                  placeholder="e.g. 9822012345 or sunil@gmail.com"
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 bg-white text-slate-900 text-sm transition-all" />
+                <p id="err-cand-contact" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+              </div>
+
+              <div>
+                <label for="cand-role" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Functional Role / Specialization <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="cand-role" name="targetRole" required
+                  placeholder="e.g. Production Manager, Quality Head, HR Lead"
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 bg-white text-slate-900 text-sm transition-all" />
+                <p id="err-cand-role" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+              </div>
+
+              <div>
+                <label for="cand-exp" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                  Total Experience (Years)
+                </label>
+                <input type="text" id="cand-exp" name="experience" placeholder="e.g. 8 years (Automotive / Sheet Metal)"
+                  class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 bg-white text-slate-900 text-sm transition-all" />
+              </div>
+
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                Attach Resume / CV (PDF, DOCX) <span class="text-red-500">*</span>
+              </label>
+              <div
+                class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-slate-300 border-dashed rounded-xl hover:border-purple-500 bg-white transition-colors cursor-pointer"
+                onclick="document.getElementById('cand-resume').click();">
+                <div class="space-y-1 text-center">
+                  <svg class="mx-auto h-9 w-9 text-slate-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                    <path
+                      d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <div class="flex text-xs text-slate-600 justify-center">
+                    <span class="font-bold text-purple-600 hover:text-purple-500">Click to upload file</span>
+                    <span class="pl-1">or drag and drop</span>
+                  </div>
+                  <p class="text-[11px] text-slate-400">PDF, DOC, DOCX up to 10MB</p>
+                  <div id="resume-filename-badge"
+                    class="hidden inline-flex items-center gap-1.5 px-3 py-1 mt-2 rounded bg-purple-100 text-purple-800 text-xs font-semibold">
+                    <span id="resume-filename-text">resume.pdf</span>
+                  </div>
+                </div>
+              </div>
+              <input type="file" id="cand-resume" name="resume" accept=".pdf,.doc,.docx"
+                onchange="handleResumeSelected(this);" class="hidden" />
+              <p id="err-cand-resume" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="text-xs text-slate-500 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                  </path>
+                </svg>
+                <span>Zero fees charged. Strict candidate confidentiality.</span>
+              </div>
+              <button type="submit" id="btn-submit-cand"
+                class="magnetic-btn w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-purple-700 hover:bg-purple-800 transition-all shadow-md hover:shadow-purple-700/20 focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
+                Submit Application
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- H. CORPORATE FOOTER (DARKER GREY BACKGROUND, MERGED LOGO, NASHIK-MUMBAI-PAN INDIA) -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#D8DFE8] text-slate-800 pt-16 pb-12 border-t border-slate-300 mt-auto relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-300">
+
+        <!-- Column 1: Identity & Merged Brand Logo Block (NO WHITE BOX, MERGED IN OVERALL BACKGROUND, DARK ROYAL BLUE) -->
+        <div class="md:col-span-5 space-y-4">
+
+          <!-- Pristine Brand Logo Identifier: Crisp Emblem + Dual-Tone Typography + Italic Tagline -->
+          <a href="#home" class="inline-flex items-center space-x-3.5 group focus:outline-none"
+            aria-label="Prem Consultants Home">
+            <img src="./prem-emblem-hd.png" alt="Prem Consultants Emblem"
+              class="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
+              onerror="this.onerror=null; this.src='./prem-full-logo.png';" />
+            <div class="flex flex-col">
+              <div class="flex items-baseline space-x-2 leading-none">
+                <!-- PREM in rich, authentic Corporate Dark Royal Blue -->
+                <span class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-[#2B3990]">PREM</span>
+                <!-- CONSULTANTS in signature Growth Green -->
+                <span
+                  class="font-brand font-black text-2xl sm:text-3xl tracking-tight text-[#16A34A]">CONSULTANTS</span>
+              </div>
+              <div class="w-full h-[1.5px] bg-slate-400 my-1"></div>
+              <span class="font-serif italic text-xs tracking-wider text-slate-700">
+                Enabling Out Performance
+              </span>
+            </div>
+          </a>
+
+          <p class="text-xs font-bold text-growth-dark tracking-wide uppercase pt-1">
+            Strategic HR & Business Advisory | Estd. 2014
+          </p>
+          <p class="text-xs text-slate-700 leading-relaxed max-w-sm">
+            Strategic HR, Balanced Scorecards, and Performance Management Systems consulting. Facilitating sustainable
+            enterprise growth across engineering, automotive, and IT sectors.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider font-display">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#home" class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">Home &
+                Strategic Overview</a></li>
+            <li><a href="#services"
+                class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">Performance Management Systems
+                (PMS)</a></li>
+            <li><a href="#services" class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">HR Process
+                Consulting & OD</a></li>
+            <li><a href="#services" class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">Corporate
+                Training & Coaching</a></li>
+            <li><a href="#why-us" class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">How We Serve
+                Better:</a></li>
+            <li><a href="#clients" class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">Client
+                Enterprise Footprint</a></li>
+            <li><a href="#about-us" class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">About Us &
+                Leadership</a></li>
+            <li><a href="#contact-us" onclick="switchInquiryTab('candidate');"
+                class="text-slate-700 hover:text-[#2B3990] font-medium transition-colors">Candidate Placement Portal</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider font-display">Registered Office</h4>
+
+          <div class="space-y-2.5 text-xs text-slate-700">
+            <div class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-[#16A34A] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <span>3, Laxmi Villa, Bramhecha Colony, Savarkar Nagar, Gangapur Road, Nashik &#8211; 422013, Maharashtra,
+                India</span>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#2B3990] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                </path>
+              </svg>
+              <div class="space-x-2">
+                <a href="tel:+919422758727" class="hover:text-[#2B3990] font-semibold transition-colors">+91
+                  9422758727</a>
+                <span>/</span>
+                <a href="tel:+919503106727" class="hover:text-[#2B3990] font-semibold transition-colors">+91
+                  9503106727</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#16A34A] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+              <div class="space-x-2">
+                <a href="mailto:prasad.jain@premconsultant.com"
+                  class="hover:text-[#2B3990] font-semibold transition-colors">prasad.jain@premconsultant.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2.5 pt-1">
+              <svg class="w-4 h-4 text-[#25D366] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.075-2.029-.475-1.583-.654-2.583-2.277-2.66-2.38-.077-.104-.636-.849-.636-1.618 0-.77.403-1.149.546-1.305.143-.155.313-.194.417-.194.104 0 .208.002.3.007.098.005.228-.037.357.272.13.311.442 1.077.481 1.155.039.078.065.169.013.273-.052.104-.078.169-.156.26-.078.091-.163.204-.233.274-.078.077-.16.16-.068.316.091.156.405.669.868 1.082.597.532 1.099.697 1.255.775.156.078.247.065.338-.039.091-.104.39-.455.494-.61.104-.156.208-.13.351-.078.143.052.909.429 1.065.507.156.078.26.117.299.182.039.065.039.377-.105.782z" />
+              </svg>
+              <a href="https://wa.me/919423389525?text=Hello%20Prem%20Consultants,%20I%20would%20like%20to%20inquire%20about%20your%20strategic%20HR%20and%20consulting%20services."
+                target="_blank" rel="noopener noreferrer" class="text-growth-dark hover:underline font-bold">
+                Direct WhatsApp: +91 9423389525
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Sub-Bar with Safe Padding from WhatsApp Floating Button -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-600 gap-4">
+        <div>
+          &copy; 2026 Prem Consultants. All rights reserved. Enabling Out Performance.
+        </div>
+
+        <!-- EXACT REQUESTED LOCATION TEXT: Nashik-Mumbai-Pan India (pr-20 ensures no overlap with floating WhatsApp) -->
+        <div class="font-extrabold text-slate-900 tracking-wide flex items-center gap-2 pr-0 sm:pr-24">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#16A34A] ring-2 ring-[#16A34A]/30"></span>
+          <span>Nashik-Mumbai-Pan India</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================= -->
+  <!-- I. PERSISTENT FLOATING WHATSAPP CTA (Static, No Pulsing Ring) -->
+  <!-- ========================================================================= -->
+  <aside class="fixed bottom-6 right-6 z-40 group" aria-label="Direct WhatsApp Contact">
+    <div class="relative flex items-center justify-center">
+      <div
+        class="absolute right-full mr-3 hidden group-hover:block whitespace-nowrap bg-slate-900 text-white text-xs font-semibold py-1.5 px-3 rounded-lg shadow-lg pointer-events-none transition-all">
+        Chat on WhatsApp
+      </div>
+
+      <a href="https://wa.me/919423389525?text=Hello%20Prem%20Consultants,%20I%20would%20like%20to%20inquire%20about%20your%20strategic%20HR%20and%20consulting%20services."
+        target="_blank" rel="noopener noreferrer"
+        class="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+        aria-label="Direct WhatsApp Inquiry with Prem Consultants">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+          <path
+            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.075-2.029-.475-1.583-.654-2.583-2.277-2.66-2.38-.077-.104-.636-.849-.636-1.618 0-.77.403-1.149.546-1.305.143-.155.313-.194.417-.194.104 0 .208.002.3.007.098.005.228-.037.357.272.13.311.442 1.077.481 1.155.039.078.065.169.013.273-.052.104-.078.169-.156.26-.078.091-.163.204-.233.274-.078.077-.16.16-.068.316.091.156.405.669.868 1.082.597.532 1.099.697 1.255.775.156.078.247.065.338-.039.091-.104.39-.455.494-.61.104-.156.208-.13.351-.078.143.052.909.429 1.065.507.156.078.26.117.299.182.039.065.039.377-.105.782zM12 2C6.477 2 2 6.477 2 12c0 1.891.526 3.662 1.438 5.178L2 22l4.981-1.408A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.616 0-3.125-.46-4.413-1.258l-.316-.194-2.964.838.854-2.887-.208-.33A7.957 7.957 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+        </svg>
+      </a>
+    </div>
+  </aside>
+
+
+  <!-- ========================================================================= -->
+  <!-- J. SERVICE DELIVERABLES MODAL DIALOG -->
+  <!-- ========================================================================= -->
+  <dialog id="service-modal"
+    class="backdrop:bg-slate-900/60 p-0 rounded-3xl max-w-2xl w-full mx-auto my-auto shadow-2xl border border-slate-200">
+    <div class="bg-white p-7 sm:p-9 space-y-6 max-h-[85vh] overflow-y-auto">
+      <div class="flex items-start justify-between pb-4 border-b border-slate-100">
+        <div>
+          <span id="modal-service-category" class="text-xs font-bold uppercase tracking-wider text-growth"></span>
+          <h3 id="modal-service-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 font-display mt-0.5">
+          </h3>
+        </div>
+        <button type="button" onclick="closeServiceModal();"
+          class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+          aria-label="Close dialog">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <p id="modal-service-desc" class="text-sm text-slate-600 leading-relaxed"></p>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-3">Audited Tangible Deliverables</h4>
+        <ul id="modal-service-deliverables" class="space-y-2.5 text-xs sm:text-sm text-slate-700"></ul>
+      </div>
+
+      <div
+        class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
+        <div class="text-xs text-slate-600">
+          Ready to deploy this framework in your organization?
+        </div>
+        <button type="button" onclick="scheduleForService();"
+          class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-growth hover:bg-growth-dark text-white font-bold text-xs transition-colors shadow-2xs">
+          Schedule Consultation
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+
+  <!-- ========================================================================= -->
+  <!-- K. INTERACTIVE JAVASCRIPT & TRANSITION TRIGGERS -->
+  <!-- ========================================================================= -->
+  <script>
+    const SERVICE_DATA = {
+      pms: {
+        category: 'Performance Management',
+        title: 'Performance Management Systems (PMS)',
+        desc: 'Comprehensive strategy cascading that anchors corporate objectives into functional departmental metrics and individual KRAs.',
+        deliverables: [
+          'Strategy Mapping & Balanced Scorecard (BSC) architecture across Financial, Customer, Internal Process, and Learning & Growth perspectives.',
+          'Custom Departmental KRA & KPI goal sheets with mathematical weighting and target metrics.',
+          'Mid-Year and Annual appraisal formats with bell-curve rating normalization guidelines.',
+          'Management By Results (MBR) monthly performance review protocol for plant and department heads.',
+          'Direct integration guidelines with ERP/HRMS systems for automated tracking.'
+        ]
+      },
+      od: {
+        category: 'Organization Development',
+        title: 'HR Process Consulting & OD',
+        desc: 'Systemic organization structuring that establishes transparent accountability, job role definitions, and institutional compliance.',
+        deliverables: [
+          'Audited Job Descriptions (JDs) with required competency levels and experience prerequisites.',
+          'Competency mapping matrix for technical, managerial, and leadership roles.',
+          'Standard Operating Procedures (SOPs) for employee onboarding, attendance, leave, and exit clearance.',
+          'Comprehensive HR Policy Manual tailored to Indian manufacturing & IT industry norms.',
+          'Organization chart redesign with clear reporting lines and span-of-control optimization.'
+        ]
+      },
+      training: {
+        category: 'Capability Building',
+        title: 'Corporate Training & Coaching',
+        desc: 'High-impact experiential workshops designed to bridge communication gaps and instill accountability among supervisors and line managers.',
+        deliverables: [
+          'Effective Performance Feedback & Constructive Dialogue training for managers.',
+          'Supervisor Development Programs for manufacturing plant line supervisors.',
+          'Advanced MS Excel for Business & HR Analytics (VLOOKUP, Pivot Tables, Dashboards).',
+          'Cross-Functional Team Collaboration & Conflict Resolution modules.',
+          'Executive presence and professional corporate grooming workshops.'
+        ]
+      },
+      recruitment: {
+        category: 'Talent Practice',
+        title: 'Strategic Talent Acquisition',
+        desc: 'Precision executive search and specialized engineering placement delivered under a strict zero-candidate-fee ethical charter.',
+        deliverables: [
+          'Rigorous technical and cultural screening conducted by engineering-qualified recruiters.',
+          'Executive & Plant Head search for manufacturing, EPC, and automotive sectors.',
+          'Targeted talent pipelines for mechanical, electrical, and quality engineers.',
+          'Strict Zero-Candidate-Fee Guarantee: 100% free placement for job applicants.',
+          'Thorough candidate credential verification and salary negotiation facilitation.'
+        ]
+      }
+    };
+
+    function openServiceModal(key) {
+      const data = SERVICE_DATA[key];
+      if (!data) return;
+
+      document.getElementById('modal-service-category').textContent = data.category;
+      document.getElementById('modal-service-title').textContent = data.title;
+      document.getElementById('modal-service-desc').textContent = data.desc;
+
+      const listContainer = document.getElementById('modal-service-deliverables');
+      listContainer.innerHTML = '';
+      data.deliverables.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'flex items-start gap-2.5';
+        li.innerHTML = `
+          <span class="w-4 h-4 rounded-full bg-growth-subtle text-growth-dark flex items-center justify-center font-bold text-[10px] mt-0.5 flex-shrink-0">&#10004;</span>
+          <span>${item}</span>
+        `;
+        listContainer.appendChild(li);
+      });
+
+      const modal = document.getElementById('service-modal');
+      modal.showModal();
+    }
+
+    function closeServiceModal() {
+      const modal = document.getElementById('service-modal');
+      modal.close();
+    }
+
+    function scheduleForService() {
+      closeServiceModal();
+      switchInquiryTab('client');
+      const contactSection = document.getElementById('contact-us');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Interactive Real-Time Scroll Progress Indicator
+    function initScrollProgress() {
+      const progressBar = document.getElementById('scroll-progress-bar');
+      if (!progressBar) return;
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+      }, { passive: true });
+    }
+
+    // Reliable Number Counting Roll-Up Animation for 25+ Years and 100% Free
+    function animateCounterElement(counter) {
+      const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
+      if (counter._countTimer) {
+        clearInterval(counter._countTimer);
+        counter._countTimer = null;
+      }
+      if (counter._countAnimFrame) {
+        cancelAnimationFrame(counter._countAnimFrame);
+        counter._countAnimFrame = null;
+      }
+
+      counter.textContent = '0';
+      const duration = 1400; // 1.4s smooth visible count
+      const startTime = performance.now();
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Smooth easeOutCubic curve so the user sees the roll up clearly
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const currentVal = Math.round(ease * target);
+        counter.textContent = String(currentVal);
+
+        if (progress < 1) {
+          counter._countAnimFrame = requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = String(target);
+          counter._countAnimFrame = null;
+        }
+      }
+
+      counter._countAnimFrame = requestAnimationFrame(updateCounter);
+    }
+
+    function initCounters() {
+      const statElements = document.querySelectorAll('.counter-number');
+      const statsRow = document.getElementById('hero-stats-row');
+      if (!statElements.length || !statsRow) return;
+
+      // Start display at 0
+      statElements.forEach(el => { el.textContent = '0'; });
+
+      let isCounting = false;
+      let hasEverTriggered = false;
+
+      function triggerCount() {
+        if (isCounting) return;
+        isCounting = true;
+        hasEverTriggered = true;
+        statElements.forEach(counter => animateCounterElement(counter));
+        setTimeout(() => {
+          isCounting = false;
+        }, 1500);
+      }
+
+      // Scroll and viewport check: Trigger counting as user scrolls down into the stats row
+      function checkStatsInView() {
+        const rect = statsRow.getBoundingClientRect();
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        const inViewport = (rect.top <= vh * 0.90) && (rect.bottom >= 40);
+
+        if (inViewport) {
+          if (!hasEverTriggered && !isCounting) {
+            triggerCount();
+          }
+        } else {
+          // If user scrolls completely away from the stats row, reset trigger so scrolling back plays it again!
+          if (rect.top > vh || rect.bottom < -50) {
+            hasEverTriggered = false;
+          }
+        }
+      }
+
+      // 1. Window scroll listener with passive option
+      window.addEventListener('scroll', checkStatsInView, { passive: true });
+      window.addEventListener('resize', checkStatsInView, { passive: true });
+
+      // 2. Modern IntersectionObserver
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !hasEverTriggered) {
+              triggerCount();
+            } else if (!entry.isIntersecting) {
+              hasEverTriggered = false;
+            }
+          });
+        }, { threshold: 0.15 });
+        observer.observe(statsRow);
+      }
+
+      // Also allow hover re-trigger on metric cards
+      statElements.forEach(counter => {
+        const card = counter.closest('.group');
+        if (card && !card._hasHoverCounter) {
+          card._hasHoverCounter = true;
+          card.addEventListener('mouseenter', () => {
+            if (!isCounting) {
+              triggerCount();
+            }
+          });
+        }
+      });
+
+      // Initial check in case user loaded the page already scrolled to this section
+      checkStatsInView();
+    }
+
+    // Attention-Retaining Animation for "How We Serve Better:"
+    function initSlideAndStick() {
+      const target = document.getElementById('serve-better-heading');
+      if (!target) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            target.classList.add('in-view');
+            observer.unobserve(target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      observer.observe(target);
+    }
+
+    // Magnetic CTA effect
+    function initMagneticButtons() {
+      const btns = document.querySelectorAll('.magnetic-btn');
+      btns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translate(0px, 0px)';
+        });
+      });
+    }
+
+    // Tab Switching
+    function switchInquiryTab(type) {
+      const tabClient = document.getElementById('tab-client');
+      const tabCand = document.getElementById('tab-candidate');
+      const panelClient = document.getElementById('panel-client');
+      const panelCand = document.getElementById('panel-candidate');
+
+      if (type === 'client') {
+        tabClient.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
+        tabClient.classList.remove('text-slate-600');
+        tabClient.setAttribute('aria-selected', 'true');
+
+        tabCand.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
+        tabCand.classList.add('text-slate-600');
+        tabCand.setAttribute('aria-selected', 'false');
+
+        panelClient.classList.remove('hidden');
+        panelCand.classList.add('hidden');
+      } else {
+        tabCand.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
+        tabCand.classList.remove('text-slate-600');
+        tabCand.setAttribute('aria-selected', 'true');
+
+        tabClient.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
+        tabClient.classList.add('text-slate-600');
+        tabClient.setAttribute('aria-selected', 'false');
+
+        panelCand.classList.remove('hidden');
+        panelClient.classList.add('hidden');
+      }
+    }
+
+    function handleResumeSelected(input) {
+      const badge = document.getElementById('resume-filename-badge');
+      const label = document.getElementById('resume-filename-text');
+      if (input.files && input.files.length > 0) {
+        label.textContent = input.files[0].name;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    function validateContact(str) {
+      const trimmed = str.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (emailRegex.test(trimmed)) return true;
+      const cleaned = trimmed.replace(/[\s\-\+\(\)]/g, '');
+      return cleaned.length >= 10 && cleaned.length <= 13 && /^\d+$/.test(cleaned);
+    }
+
+    function handleClientSubmit(e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('client-name');
+      const companyInput = document.getElementById('client-company');
+      const contactInput = document.getElementById('client-contact');
+      const serviceInput = document.getElementById('client-service');
+      const notesInput = document.getElementById('client-notes');
+
+      let isValid = true;
+
+      const errName = document.getElementById('err-client-name');
+      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+        errName.textContent = 'Please enter your full name.';
+        errName.classList.remove('hidden');
+        nameInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errName.classList.add('hidden');
+        nameInput.classList.remove('border-red-500');
+      }
+
+      const errCompany = document.getElementById('err-client-company');
+      if (!companyInput.value.trim() || companyInput.value.trim().length < 2) {
+        errCompany.textContent = 'Please enter your company name and city.';
+        errCompany.classList.remove('hidden');
+        companyInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errCompany.classList.add('hidden');
+        companyInput.classList.remove('border-red-500');
+      }
+
+      const errContact = document.getElementById('err-client-contact');
+      if (!contactInput.value.trim() || !validateContact(contactInput.value)) {
+        errContact.textContent = 'Please enter a valid work email or 10-digit mobile number.';
+        errContact.classList.remove('hidden');
+        contactInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errContact.classList.add('hidden');
+        contactInput.classList.remove('border-red-500');
+      }
+
+      const errService = document.getElementById('err-client-service');
+      if (!serviceInput.value) {
+        errService.textContent = 'Please select a consulting focus area.';
+        errService.classList.remove('hidden');
+        serviceInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errService.classList.add('hidden');
+        serviceInput.classList.remove('border-red-500');
+      }
+
+      if (!isValid) return;
+
+      const rawText = `Hello Prem Consultants,\nI would like to schedule a strategic discovery discussion.\n\n*Name:* ${nameInput.value.trim()}\n*Company:* ${companyInput.value.trim()}\n*Contact:* ${contactInput.value.trim()}\n*Service:* ${serviceInput.value}\n*Notes:* ${notesInput.value.trim() || 'N/A'}`;
+      const waUrl = `https://wa.me/919423389525?text=${encodeURIComponent(rawText)}`;
+
+      const waLink = document.getElementById('client-whatsapp-link');
+      if (waLink) waLink.href = waUrl;
+
+      const alertBox = document.getElementById('client-success-alert');
+      alertBox.classList.remove('hidden');
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      const btn = document.getElementById('btn-submit-client');
+      btn.textContent = '✔ Request Submitted';
+      btn.classList.add('bg-slate-700', 'cursor-not-allowed');
+      btn.disabled = true;
+    }
+
+    function handleCandidateSubmit(e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('cand-name');
+      const contactInput = document.getElementById('cand-contact');
+      const roleInput = document.getElementById('cand-role');
+      const expInput = document.getElementById('cand-exp');
+      const fileInput = document.getElementById('cand-resume');
+
+      let isValid = true;
+
+      const errName = document.getElementById('err-cand-name');
+      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+        errName.textContent = 'Please enter your full name.';
+        errName.classList.remove('hidden');
+        nameInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errName.classList.add('hidden');
+        nameInput.classList.remove('border-red-500');
+      }
+
+      const errContact = document.getElementById('err-cand-contact');
+      if (!contactInput.value.trim() || !validateContact(contactInput.value)) {
+        errContact.textContent = 'Please enter a valid phone number or email.';
+        errContact.classList.remove('hidden');
+        contactInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errContact.classList.add('hidden');
+        contactInput.classList.remove('border-red-500');
+      }
+
+      const errRole = document.getElementById('err-cand-role');
+      if (!roleInput.value.trim() || roleInput.value.trim().length < 2) {
+        errRole.textContent = 'Please specify your target functional role.';
+        errRole.classList.remove('hidden');
+        roleInput.classList.add('border-red-500');
+        isValid = false;
+      } else {
+        errRole.classList.add('hidden');
+        roleInput.classList.remove('border-red-500');
+      }
+
+      const errResume = document.getElementById('err-cand-resume');
+      if (!fileInput.files || fileInput.files.length === 0) {
+        errResume.textContent = 'Please attach your CV / Resume document.';
+        errResume.classList.remove('hidden');
+        isValid = false;
+      } else {
+        errResume.classList.add('hidden');
+      }
+
+      if (!isValid) return;
+
+      const rawText = `Hello Deepali Jain & Prem Consultants Talent Team,\nI have submitted my profile for your candidate portal (100% Free Placement).\n\n*Name:* ${nameInput.value.trim()}\n*Target Role:* ${roleInput.value.trim()}\n*Contact:* ${contactInput.value.trim()}\n*Experience:* ${expInput.value.trim() || 'Not specified'}`;
+      const waUrl = `https://wa.me/919423389525?text=${encodeURIComponent(rawText)}`;
+
+      const waLink = document.getElementById('candidate-whatsapp-link');
+      if (waLink) waLink.href = waUrl;
+
+      const alertBox = document.getElementById('candidate-success-alert');
+      alertBox.classList.remove('hidden');
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      const btn = document.getElementById('btn-submit-cand');
+      btn.textContent = '✔ Application Submitted';
+      btn.classList.add('bg-slate-700', 'cursor-not-allowed');
+      btn.disabled = true;
+    }
+
+    // Mobile Menu & Scroll
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+      });
+    }
+
+    function closeMobileMenu() {
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      }
+    }
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('text-[#2B3990]', 'font-bold', 'bg-slate-100/80');
+              link.classList.remove('text-slate-700');
+            } else {
+              link.classList.remove('text-[#2B3990]', 'font-bold', 'bg-slate-100/80');
+              link.classList.add('text-slate-700');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(sec => observer.observe(sec));
+
+    function initAll() {
+      initScrollProgress();
+      initCounters();
+      initSlideAndStick();
+      initMagneticButtons();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAll);
+    } else {
+      initAll();
+    }
+  </script>
+
+  <!-- ===== SEAMLESS MARQUEE ENGINE ===== -->
+  <script>
+    (function () {
+      function initMarquee() {
+        var inner = document.getElementById('marquee-inner');
+        if (!inner) return;
+
+        // Remove old Tailwind animation class that used -50% (wrong for unequal sets)
+        inner.classList.remove('animate-marquee');
+        inner.style.animation = 'none';
+        inner.style.transform = 'translateX(0)';
+
+        // Give every direct child item consistent gap via margin-right
+        // (the parent no longer uses space-x so we control it per item)
+        var items = inner.children;
+        var GAP = 48; // px, matches sm:space-x-12 (3rem = 48px)
+        for (var i = 0; i < items.length; i++) {
+          items[i].style.marginRight = GAP + 'px';
+          items[i].style.display = 'inline-flex';
+          items[i].style.flexShrink = '0';
+        }
+
+        // Measure total width = first half (Set 1, 7 items)
+        // Set 1 = first 7 children, Set 2 = next 7 children (exact duplicates)
+        var totalItems = items.length; // should be 14
+        var halfCount = totalItems / 2;
+        var halfWidth = 0;
+        for (var j = 0; j < halfCount; j++) {
+          halfWidth += items[j].offsetWidth + GAP;
+        }
+
+        // Animate: translate from 0 to -halfWidth, then snap back to 0 instantly
+        var pos = 0;
+        var speed = 0.6; // pixels per frame (~36s for full loop at 60fps)
+        var raf;
+
+        function tick() {
+          pos -= speed;
+          if (pos <= -halfWidth) {
+            pos = 0; // seamless snap: Set2 is identical so it looks continuous
+          }
+          inner.style.transform = 'translateX(' + pos + 'px)';
+          raf = requestAnimationFrame(tick);
+        }
+
+        // Pause on hover
+        var track = document.getElementById('marquee-track');
+        if (track) {
+          track.addEventListener('mouseenter', function () { cancelAnimationFrame(raf); });
+          track.addEventListener('mouseleave', function () { raf = requestAnimationFrame(tick); });
+        }
+
+        raf = requestAnimationFrame(tick);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMarquee);
+      } else {
+        initMarquee();
+      }
+    })();
+  </script>
+</body>
+
+</html>
