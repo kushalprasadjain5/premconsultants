@@ -11,7 +11,7 @@
   <meta property="og:description"
     content="Strategic HR & Performance Management Partner for Growing Enterprises. Balanced Scorecards, PMS, OD consulting, and executive talent solutions." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="./prem-emblem-hd.png" />
+  <meta property="og:image" content="./images/prem-emblem-hd.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Fonts: Montserrat (Bold Brand Display), Plus Jakarta Sans & Inter -->
@@ -23,214 +23,12 @@
 
   <!-- Modern Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandBlue: '#2B3990',
-            brandBlueDark: '#1E2B75',
-            brandBlueMid: '#1D4ED8',
-            brandBlueVibrant: '#2563EB',
-            corporate: {
-              950: '#0A1120',
-              900: '#0F172A',
-              850: '#172554',
-              800: '#1E293B',
-              700: '#334155',
-              600: '#475569',
-              500: '#64748B',
-              400: '#94A3B8',
-              300: '#CBD5E1',
-              200: '#E2E8F0',
-              100: '#F1F5F9',
-              50: '#F8FAFC',
-            },
-            growth: {
-              DEFAULT: '#16A34A',
-              light: '#22C55E',
-              dark: '#15803D',
-              subtle: '#DCFCE7',
-              50: '#F0FDF4',
-            }
-          },
-          fontFamily: {
-            brand: ['"Montserrat"', 'system-ui', 'sans-serif'],
-            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          animation: {
-            'marquee': 'marquee 32s linear infinite',
-            'float-icon': 'floatIcon 3s ease-in-out infinite alternate',
-            'pulse-subtle': 'pulseSubtle 2.5s ease-in-out infinite',
-          },
-          keyframes: {
-            marquee: {
-              '0%': { transform: 'translateX(0%)' },
-              '100%': { transform: 'translateX(-50%)' },
-            },
-            floatIcon: {
-              '0%': { transform: 'translateY(0px)' },
-              '100%': { transform: 'translateY(-6px)' },
-            },
-            pulseSubtle: {
-              '0%, 100%': { opacity: '0.9', transform: 'scale(1)' },
-              '50%': { opacity: '1', transform: 'scale(1.05)' },
-            }
-          }
-        }
-      }
-    }
-  </script>
 
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: #334155;
-      background-color: #FFFFFF;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
+  <!-- External Custom Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
 
-    .nav-light-blur {
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      background-color: rgba(255, 255, 255, 0.96);
-    }
-
-    /* Ambient Hero Background */
-    .hero-light-pattern {
-      background-color: #FAFAFC;
-      background-image:
-        radial-gradient(at 0% 0%, rgba(43, 57, 144, 0.04) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(22, 163, 74, 0.04) 0px, transparent 50%),
-        radial-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 30px 30px;
-    }
-
-    /* Iron Shine Animation on the word Strategic */
-    .iron-shine {
-      background: linear-gradient(110deg,
-          #0F172A 15%,
-          #334155 30%,
-          #94A3B8 45%,
-          #FFFFFF 50%,
-          #94A3B8 55%,
-          #334155 70%,
-          #0F172A 85%);
-      background-size: 250% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: ironShineAnim 4s ease-in-out infinite;
-      display: inline-block;
-      font-weight: 900;
-    }
-
-    @keyframes ironShineAnim {
-      0% {
-        background-position: 220% 0;
-      }
-
-      45%,
-      100% {
-        background-position: -220% 0;
-      }
-    }
-
-    /* Attention-Retaining Animation for "How We Serve Better:" */
-    @keyframes serveBetterReveal {
-      0% {
-        opacity: 0;
-        transform: translateY(32px) scale(0.95);
-        filter: blur(5px);
-      }
-
-      60% {
-        transform: translateY(-2px) scale(1.02);
-        filter: blur(0);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
-
-    .serve-better-anim {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: transform, opacity;
-    }
-
-    .serve-better-anim.in-view {
-      opacity: 1;
-      transform: translateY(0);
-      animation: serveBetterReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    .serve-better-line {
-      width: 0;
-      height: 4px;
-      border-radius: 9999px;
-      background: linear-gradient(90deg, #16A34A, #2B3990, #16A34A);
-      margin: 14px auto 0 auto;
-      transition: width 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
-    }
-
-    .serve-better-anim.in-view+.serve-better-line {
-      width: 140px;
-    }
-
-    /* Animated Service Cards */
-    .service-card-anim {
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-    }
-
-    .service-card-anim:hover {
-      transform: translateY(-8px) scale(1.018);
-      box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.12), 0 0 20px rgba(22, 163, 74, 0.15);
-    }
-
-    .service-card-anim:hover .service-icon {
-      transform: scale(1.15) rotate(4deg);
-      box-shadow: 0 8px 20px -4px rgba(22, 163, 74, 0.3);
-    }
-
-    .service-icon {
-      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    /* Continuous Marquee - Always Rotating in Any Case */
-    .marquee-inner {
-      animation-play-state: running !important;
-    }
-
-    /* Magnetic CTA Effect */
-    .magnetic-btn {
-      transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.25s ease;
-      will-change: transform;
-    }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #F8FAFC;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #CBD5E1;
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #94A3B8;
-    }
-  </style>
+  <!-- External Interactive JavaScript -->
+  <script src="./script.js" defer></script>
 </head>
 
 <body class="min-h-screen flex flex-col antialiased selection:bg-growth selection:text-white relative">
@@ -247,9 +45,9 @@
         <a href="#home" class="flex items-center space-x-3 group focus:outline-none flex-shrink-0 mr-4 lg:mr-6 xl:mr-10"
           aria-label="Prem Consultants Home">
           <!-- Logo Emblem with NO Border, NO Box -->
-          <img src="./prem-emblem-hd.png" alt="Prem Consultants Emblem"
+          <img src="./images/prem-emblem-hd.png" alt="Prem Consultants Emblem"
             class="h-11 w-11 sm:h-12 sm:w-12 object-contain transition-transform duration-300 group-hover:scale-105"
-            onerror="this.onerror=null; this.src='./prem-full-logo.png';" />
+            onerror="this.onerror=null; this.src='./images/prem-full-logo.png';" />
 
           <div class="flex flex-col">
             <div class="flex items-baseline space-x-1.5 leading-none">
@@ -448,212 +246,207 @@
         <!-- 1. Mahindra Rise -->
         <div class="inline-flex flex-col items-center group cursor-pointer">
           <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M22 68L38 32H48L50 44L52 32H62L78 68H66L58 48L54 68H46L42 48L34 68H22Z" fill="#D32F2F" />
-              <path d="M46 64H54L50 54L46 64Z" fill="#D32F2F" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-red-400 tracking-tight mt-3 transition-colors">Mahindra
-            Rise</span>
-          <span class="text-xs font-semibold text-slate-300">Automotive & Financial</span>
-        </div>
-
-        <!-- 2. Ashoka Buildcon -->
-        <div class="inline-flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M50 20L25 72H40L50 48L60 72H75L50 20Z" fill="#1E3A8A" />
-              <circle cx="50" cy="38" r="5" fill="#F59E0B" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">Ashoka
-            Buildcon</span>
-          <span class="text-xs font-semibold text-slate-300">Infrastructure EPC</span>
-        </div>
-
-        <!-- 3. Waaree Solar -->
-        <div class="inline-flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="16" fill="#D97706" />
-              <path d="M50 20V28M50 72V80M20 50H28M72 50H80M29 29L35 35M65 65L71 71M71 29L65 35M35 65L29 71"
-                stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">Waaree
-            Solar</span>
-          <span class="text-xs font-semibold text-slate-300">Renewable Energy</span>
-        </div>
-
-        <!-- 4. Sahyadri Farms -->
-        <div class="inline-flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M50 25C38 35 34 52 42 66C52 68 66 60 66 45C66 32 50 25 50 25Z" fill="#16A34A" />
-              <circle cx="44" cy="52" r="5" fill="#86EFAC" />
-              <circle cx="54" cy="46" r="4" fill="#86EFAC" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-emerald-400 tracking-tight mt-3 transition-colors">Sahyadri
-            Farms</span>
-          <span class="text-xs font-semibold text-slate-300">Agritech & Food</span>
-        </div>
-
-        <!-- 5. TDK / EPCOS -->
-        <div class="inline-flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <rect x="20" y="38" width="60" height="24" rx="4" fill="#1E40AF" />
-              <text x="50" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14"
-                fill="white" text-anchor="middle">TDK</text>
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">TDK
-            / EPCOS</span>
-          <span class="text-xs font-semibold text-slate-300">Electronics Components</span>
-        </div>
-
-        <!-- 6. Bedmutha Industries -->
-        <div class="inline-flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <polygon points="50,22 76,37 76,67 50,82 24,67 24,37" stroke="#334155" stroke-width="4" fill="none" />
-              <circle cx="50" cy="52" r="8" fill="#1E293B" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-slate-200 tracking-tight mt-3 transition-colors">Bedmutha
-            Industries</span>
-          <span class="text-xs font-semibold text-slate-300">Heavy Engineering & Steel</span>
-        </div>
-
-        <!-- 7. EPL Contractors -->
-        <div class="inline-flex flex-col items-center group cursor-pointer">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M30 70V30H70V40H42V46H66V54H42V70H30Z" fill="#B45309" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">EPL
-            Contractors</span>
-          <span class="text-xs font-semibold text-slate-300">Engineers & Contractors</span>
-        </div>
-
-        <!-- Track Set 2 (Perfect Duplicate for Seamless Infinite Marquee) -->
-        <!-- 1. Mahindra Rise -->
-        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M22 68L38 32H48L50 44L52 32H62L78 68H66L58 48L54 68H46L42 48L34 68H22Z" fill="#D32F2F" />
-              <path d="M46 64H54L50 54L46 64Z" fill="#D32F2F" />
-            </svg>
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/mahindra_rise.jpeg" alt="Mahindra Rise"
+              class="absolute inset-0 w-full h-full object-cover object-center">
           </div>
           <span
             class="text-sm sm:text-base font-extrabold text-white group-hover:text-red-400 tracking-tight mt-3 transition-colors">Mahindra
             Rise</span>
           <span class="text-xs font-semibold text-slate-300">Automotive &amp; Financial</span>
         </div>
+
         <!-- 2. Ashoka Buildcon -->
-        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+        <div class="inline-flex flex-col items-center group cursor-pointer">
           <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M50 20L25 72H40L50 48L60 72H75L50 20Z" fill="#1E3A8A" />
-              <circle cx="50" cy="38" r="5" fill="#F59E0B" />
-            </svg>
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/ashoka_buildcon.jpeg" alt="Ashoka Buildcon"
+              class="absolute inset-0 w-full h-full object-cover object-center">
           </div>
           <span
             class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">Ashoka
             Buildcon</span>
           <span class="text-xs font-semibold text-slate-300">Infrastructure EPC</span>
         </div>
-        <!-- 3. Waaree Solar -->
-        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+
+
+        <!-- 3. Bedmutha Industries -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
           <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="16" fill="#D97706" />
-              <path d="M50 20V28M50 72V80M20 50H28M72 50H80M29 29L35 35M65 65L71 71M71 29L65 35M35 65L29 71"
-                stroke="#F59E0B" stroke-width="4" stroke-linecap="round" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">Waaree
-            Solar</span>
-          <span class="text-xs font-semibold text-slate-300">Renewable Energy</span>
-        </div>
-        <!-- 4. Sahyadri Farms -->
-        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M50 25C38 35 34 52 42 66C52 68 66 60 66 45C66 32 50 25 50 25Z" fill="#16A34A" />
-              <circle cx="44" cy="52" r="5" fill="#86EFAC" />
-              <circle cx="54" cy="46" r="4" fill="#86EFAC" />
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-emerald-400 tracking-tight mt-3 transition-colors">Sahyadri
-            Farms</span>
-          <span class="text-xs font-semibold text-slate-300">Agritech &amp; Food</span>
-        </div>
-        <!-- 5. TDK / EPCOS -->
-        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <rect x="20" y="38" width="60" height="24" rx="4" fill="#1E40AF" />
-              <text x="50" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="14"
-                fill="white" text-anchor="middle">TDK</text>
-            </svg>
-          </div>
-          <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">TDK
-            / EPCOS</span>
-          <span class="text-xs font-semibold text-slate-300">Electronics Components</span>
-        </div>
-        <!-- 6. Bedmutha Industries -->
-        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
-          <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <polygon points="50,22 76,37 76,67 50,82 24,67 24,37" stroke="#334155" stroke-width="4" fill="none" />
-              <circle cx="50" cy="52" r="8" fill="#1E293B" />
-            </svg>
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/bedmutha_industries.jpeg" alt="Bedmutha Industries"
+              class="absolute inset-0 w-full h-full object-cover object-center">
           </div>
           <span
             class="text-sm sm:text-base font-extrabold text-white group-hover:text-slate-200 tracking-tight mt-3 transition-colors">Bedmutha
             Industries</span>
           <span class="text-xs font-semibold text-slate-300">Heavy Engineering &amp; Steel</span>
         </div>
-        <!-- 7. EPL Contractors -->
-        <div class="inline-flex flex-col items-center group cursor-pointer" style="margin-right:3rem;">
+        <!-- 4. Sahyadri Farms -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
           <div
-            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 flex items-center justify-center p-4">
-            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none">
-              <path d="M30 70V30H70V40H42V46H66V54H42V70H30Z" fill="#B45309" />
-            </svg>
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/sahyadri_farms.jpeg" alt="Sahyadri Farms"
+              class="absolute inset-0 w-full h-full object-cover object-center">
           </div>
           <span
-            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">EPL
-            Contractors</span>
-          <span class="text-xs font-semibold text-slate-300">Engineers &amp; Contractors</span>
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-emerald-400 tracking-tight mt-3 transition-colors">Sahyadri
+            Farms</span>
+          <span class="text-xs font-semibold text-slate-300">Agritech &amp; Food</span>
         </div>
 
+        <!-- 5. Waaree Solar -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/waaree_solar.jpeg" alt="Waaree Solar"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">Waaree
+            Solar</span>
+          <span class="text-xs font-semibold text-slate-300">Renewable Energy</span>
+        </div>
+        <!-- 6. ALF -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/tdk_epcos.jpeg" alt="ALF" class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">ALF
+            Engineering</span>
+          <span class="text-xs font-semibold text-slate-300">Automotive &amp; Engineering</span>
+        </div>
+
+
+        <!-- 7.MB Sugar-->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/epl_contractors.jpeg" alt="EPL Contractors"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">MB
+            Sugar</span>
+          <span class="text-xs font-semibold text-slate-300">Food &amp; Pharmaceuticals</span>
+        </div>
+        <!-- 8. Uber Eats  -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/Uber_eats.jpeg" alt="Uber Eats"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-slate-200 tracking-tight mt-3 transition-colors">Uber
+            Eats</span>
+          <span class="text-xs font-semibold text-slate-300">Food Delivery &amp; Tech</span>
+        </div>
+
+        <!-- Track Set 2 (Perfect Duplicate for Seamless Infinite Marquee) -->
+        <!-- 1. Mahindra Rise -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/mahindra_rise.jpeg" alt="Mahindra Rise"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-red-400 tracking-tight mt-3 transition-colors">Mahindra
+            Rise</span>
+          <span class="text-xs font-semibold text-slate-300">Automotive &amp; Financial</span>
+        </div>
+
+        <!-- 2. Ashoka Buildcon -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/ashoka_buildcon.jpeg" alt="Ashoka Buildcon"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">Ashoka
+            Buildcon</span>
+          <span class="text-xs font-semibold text-slate-300">Infrastructure EPC</span>
+        </div>
+
+
+        <!-- 3. Bedmutha Industries -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/bedmutha_industries.jpeg" alt="Bedmutha Industries"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-slate-200 tracking-tight mt-3 transition-colors">Bedmutha
+            Industries</span>
+          <span class="text-xs font-semibold text-slate-300">Heavy Engineering &amp; Steel</span>
+        </div>
+        <!-- 4. Sahyadri Farms -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/sahyadri_farms.jpeg" alt="Sahyadri Farms"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-emerald-400 tracking-tight mt-3 transition-colors">Sahyadri
+            Farms</span>
+          <span class="text-xs font-semibold text-slate-300">Agritech &amp; Food</span>
+        </div>
+
+        <!-- 5. Waaree Solar -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/waaree_solar.jpeg" alt="Waaree Solar"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">Waaree
+            Solar</span>
+          <span class="text-xs font-semibold text-slate-300">Renewable Energy</span>
+        </div>
+        <!-- 6. ALF -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/tdk_epcos.jpeg" alt="ALF" class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-blue-300 tracking-tight mt-3 transition-colors">ALF
+            Engineering</span>
+          <span class="text-xs font-semibold text-slate-300">Automotive &amp; Engineering</span>
+        </div>
+
+
+        <!-- 7.MB Sugar-->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/epl_contractors.jpeg" alt="EPL Contractors"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-amber-400 tracking-tight mt-3 transition-colors">MB
+            Sugar</span>
+          <span class="text-xs font-semibold text-slate-300">Food &amp; Pharmaceuticals</span>
+        </div>
+        <!-- 8. Uber Eats  -->
+        <div class="inline-flex flex-col items-center group cursor-pointer">
+          <div
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-white/80 shadow-lg group-hover:scale-115 transition-all duration-300 relative overflow-hidden">
+            <img src="./images/Uber_eats.jpeg" alt="Uber Eats"
+              class="absolute inset-0 w-full h-full object-cover object-center">
+          </div>
+          <span
+            class="text-sm sm:text-base font-extrabold text-white group-hover:text-slate-200 tracking-tight mt-3 transition-colors">Uber
+            Eats</span>
+          <span class="text-xs font-semibold text-slate-300">Food Delivery &amp; Tech</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1077,9 +870,9 @@
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-5 border-b border-slate-100">
               <div
                 class="relative w-24 h-24 sm:w-26 sm:h-26 rounded-2xl overflow-hidden border border-slate-200 flex-shrink-0 bg-slate-100">
-                <img src="./prasad-jain.png" alt="Prasad Jain - Founder & Principal Consultant"
+                <img src="./images/prasad-jain.png" alt="Prasad Jain - Founder & Principal Consultant"
                   class="w-full h-full object-cover object-top"
-                  onerror="this.onerror=null; this.src='./assets/aistudio/Professional_Office_Portrait_with_Greenery_17d4e0d3.png';" />
+                  onerror="this.onerror=null; this.src='./images/Professional_Office_Portrait_with_Greenery_17d4e0d3.png';" />
               </div>
               <div class="space-y-1">
                 <div class="text-[11px] font-bold uppercase tracking-wider text-growth-dark">Founder & Principal
@@ -1137,9 +930,9 @@
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-5 border-b border-slate-100">
               <div
                 class="relative w-24 h-24 sm:w-26 sm:h-26 rounded-2xl overflow-hidden border border-slate-200 flex-shrink-0 bg-slate-100">
-                <img src="./deepali-jain.png" alt="Deepali Jain - Co-Founder, Recruitment Head, Trainer"
+                <img src="./images/deepali-jain.png" alt="Deepali Jain - Co-Founder, Recruitment Head, Trainer"
                   class="w-full h-full object-cover object-top"
-                  onerror="this.onerror=null; this.src='./assets/aistudio/Smiling_Professional_in_Black_Blazer_4194ab60.png';" />
+                  onerror="this.onerror=null; this.src='./images/Smiling_Professional_in_Black_Blazer_4194ab60.png';" />
               </div>
               <div class="space-y-1">
                 <!-- EXACT ROLE DESIGNATION REQUESTED (Green matching Founder & Principal Consultant) -->
@@ -1533,9 +1326,9 @@
           <!-- Pristine Brand Logo Identifier: Crisp Emblem + Dual-Tone Typography + Italic Tagline -->
           <a href="#home" class="inline-flex items-center space-x-3.5 group focus:outline-none"
             aria-label="Prem Consultants Home">
-            <img src="./prem-emblem-hd.png" alt="Prem Consultants Emblem"
+            <img src="./images/prem-emblem-hd.png" alt="Prem Consultants Emblem"
               class="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
-              onerror="this.onerror=null; this.src='./prem-full-logo.png';" />
+              onerror="this.onerror=null; this.src='./images/prem-full-logo.png';" />
             <div class="flex flex-col">
               <div class="flex items-baseline space-x-2 leading-none">
                 <!-- PREM in rich, authentic Corporate Dark Royal Blue -->
@@ -1726,575 +1519,14 @@
   </dialog>
 
 
+    <!-- ========================================================================= -->
+  <!-- K. INTERACTIVE JAVASCRIPT (SEPARATED IN ./script.js) -->
   <!-- ========================================================================= -->
-  <!-- K. INTERACTIVE JAVASCRIPT & TRANSITION TRIGGERS -->
-  <!-- ========================================================================= -->
-  <script>
-    const SERVICE_DATA = {
-      pms: {
-        category: 'Performance Management',
-        title: 'Performance Management Systems (PMS)',
-        desc: 'Comprehensive strategy cascading that anchors corporate objectives into functional departmental metrics and individual KRAs.',
-        deliverables: [
-          'Strategy Mapping & Balanced Scorecard (BSC) architecture across Financial, Customer, Internal Process, and Learning & Growth perspectives.',
-          'Custom Departmental KRA & KPI goal sheets with mathematical weighting and target metrics.',
-          'Mid-Year and Annual appraisal formats with bell-curve rating normalization guidelines.',
-          'Management By Results (MBR) monthly performance review protocol for plant and department heads.',
-          'Direct integration guidelines with ERP/HRMS systems for automated tracking.'
-        ]
-      },
-      od: {
-        category: 'Organization Development',
-        title: 'HR Process Consulting & OD',
-        desc: 'Systemic organization structuring that establishes transparent accountability, job role definitions, and institutional compliance.',
-        deliverables: [
-          'Audited Job Descriptions (JDs) with required competency levels and experience prerequisites.',
-          'Competency mapping matrix for technical, managerial, and leadership roles.',
-          'Standard Operating Procedures (SOPs) for employee onboarding, attendance, leave, and exit clearance.',
-          'Comprehensive HR Policy Manual tailored to Indian manufacturing & IT industry norms.',
-          'Organization chart redesign with clear reporting lines and span-of-control optimization.'
-        ]
-      },
-      training: {
-        category: 'Capability Building',
-        title: 'Corporate Training & Coaching',
-        desc: 'High-impact experiential workshops designed to bridge communication gaps and instill accountability among supervisors and line managers.',
-        deliverables: [
-          'Effective Performance Feedback & Constructive Dialogue training for managers.',
-          'Supervisor Development Programs for manufacturing plant line supervisors.',
-          'Advanced MS Excel for Business & HR Analytics (VLOOKUP, Pivot Tables, Dashboards).',
-          'Cross-Functional Team Collaboration & Conflict Resolution modules.',
-          'Executive presence and professional corporate grooming workshops.'
-        ]
-      },
-      recruitment: {
-        category: 'Talent Practice',
-        title: 'Strategic Talent Acquisition',
-        desc: 'Precision executive search and specialized engineering placement delivered under a strict zero-candidate-fee ethical charter.',
-        deliverables: [
-          'Rigorous technical and cultural screening conducted by engineering-qualified recruiters.',
-          'Executive & Plant Head search for manufacturing, EPC, and automotive sectors.',
-          'Targeted talent pipelines for mechanical, electrical, and quality engineers.',
-          'Strict Zero-Candidate-Fee Guarantee: 100% free placement for job applicants.',
-          'Thorough candidate credential verification and salary negotiation facilitation.'
-        ]
-      }
-    };
-
-    function openServiceModal(key) {
-      const data = SERVICE_DATA[key];
-      if (!data) return;
-
-      document.getElementById('modal-service-category').textContent = data.category;
-      document.getElementById('modal-service-title').textContent = data.title;
-      document.getElementById('modal-service-desc').textContent = data.desc;
-
-      const listContainer = document.getElementById('modal-service-deliverables');
-      listContainer.innerHTML = '';
-      data.deliverables.forEach(item => {
-        const li = document.createElement('li');
-        li.className = 'flex items-start gap-2.5';
-        li.innerHTML = `
-          <span class="w-4 h-4 rounded-full bg-growth-subtle text-growth-dark flex items-center justify-center font-bold text-[10px] mt-0.5 flex-shrink-0">&#10004;</span>
-          <span>${item}</span>
-        `;
-        listContainer.appendChild(li);
-      });
-
-      const modal = document.getElementById('service-modal');
-      modal.showModal();
-    }
-
-    function closeServiceModal() {
-      const modal = document.getElementById('service-modal');
-      modal.close();
-    }
-
-    function scheduleForService() {
-      closeServiceModal();
-      switchInquiryTab('client');
-      const contactSection = document.getElementById('contact-us');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    // Interactive Real-Time Scroll Progress Indicator
-    function initScrollProgress() {
-      const progressBar = document.getElementById('scroll-progress-bar');
-      if (!progressBar) return;
-      window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-        progressBar.style.width = `${progress}%`;
-      }, { passive: true });
-    }
-
-    // Reliable Number Counting Roll-Up Animation for 25+ Years and 100% Free
-    function animateCounterElement(counter) {
-      const target = parseInt(counter.getAttribute('data-target'), 10) || 0;
-      if (counter._countTimer) {
-        clearInterval(counter._countTimer);
-        counter._countTimer = null;
-      }
-      if (counter._countAnimFrame) {
-        cancelAnimationFrame(counter._countAnimFrame);
-        counter._countAnimFrame = null;
-      }
-
-      counter.textContent = '0';
-      const duration = 1400; // 1.4s smooth visible count
-      const startTime = performance.now();
-
-      function updateCounter(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Smooth easeOutCubic curve so the user sees the roll up clearly
-        const ease = 1 - Math.pow(1 - progress, 3);
-        const currentVal = Math.round(ease * target);
-        counter.textContent = String(currentVal);
-
-        if (progress < 1) {
-          counter._countAnimFrame = requestAnimationFrame(updateCounter);
-        } else {
-          counter.textContent = String(target);
-          counter._countAnimFrame = null;
-        }
-      }
-
-      counter._countAnimFrame = requestAnimationFrame(updateCounter);
-    }
-
-    function initCounters() {
-      const statElements = document.querySelectorAll('.counter-number');
-      const statsRow = document.getElementById('hero-stats-row');
-      if (!statElements.length || !statsRow) return;
-
-      // Start display at 0
-      statElements.forEach(el => { el.textContent = '0'; });
-
-      let isCounting = false;
-      let hasEverTriggered = false;
-
-      function triggerCount() {
-        if (isCounting) return;
-        isCounting = true;
-        hasEverTriggered = true;
-        statElements.forEach(counter => animateCounterElement(counter));
-        setTimeout(() => {
-          isCounting = false;
-        }, 1500);
-      }
-
-      // Scroll and viewport check: Trigger counting as user scrolls down into the stats row
-      function checkStatsInView() {
-        const rect = statsRow.getBoundingClientRect();
-        const vh = window.innerHeight || document.documentElement.clientHeight;
-        const inViewport = (rect.top <= vh * 0.90) && (rect.bottom >= 40);
-
-        if (inViewport) {
-          if (!hasEverTriggered && !isCounting) {
-            triggerCount();
-          }
-        } else {
-          // If user scrolls completely away from the stats row, reset trigger so scrolling back plays it again!
-          if (rect.top > vh || rect.bottom < -50) {
-            hasEverTriggered = false;
-          }
-        }
-      }
-
-      // 1. Window scroll listener with passive option
-      window.addEventListener('scroll', checkStatsInView, { passive: true });
-      window.addEventListener('resize', checkStatsInView, { passive: true });
-
-      // 2. Modern IntersectionObserver
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting && !hasEverTriggered) {
-              triggerCount();
-            } else if (!entry.isIntersecting) {
-              hasEverTriggered = false;
-            }
-          });
-        }, { threshold: 0.15 });
-        observer.observe(statsRow);
-      }
-
-      // Also allow hover re-trigger on metric cards
-      statElements.forEach(counter => {
-        const card = counter.closest('.group');
-        if (card && !card._hasHoverCounter) {
-          card._hasHoverCounter = true;
-          card.addEventListener('mouseenter', () => {
-            if (!isCounting) {
-              triggerCount();
-            }
-          });
-        }
-      });
-
-      // Initial check in case user loaded the page already scrolled to this section
-      checkStatsInView();
-    }
-
-    // Attention-Retaining Animation for "How We Serve Better:"
-    function initSlideAndStick() {
-      const target = document.getElementById('serve-better-heading');
-      if (!target) return;
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            target.classList.add('in-view');
-            observer.unobserve(target);
-          }
-        });
-      }, { threshold: 0.15 });
-
-      observer.observe(target);
-    }
-
-    // Magnetic CTA effect
-    function initMagneticButtons() {
-      const btns = document.querySelectorAll('.magnetic-btn');
-      btns.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-          const rect = btn.getBoundingClientRect();
-          const x = e.clientX - rect.left - rect.width / 2;
-          const y = e.clientY - rect.top - rect.height / 2;
-          btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
-        });
-        btn.addEventListener('mouseleave', () => {
-          btn.style.transform = 'translate(0px, 0px)';
-        });
-      });
-    }
-
-    // Tab Switching
-    function switchInquiryTab(type) {
-      const tabClient = document.getElementById('tab-client');
-      const tabCand = document.getElementById('tab-candidate');
-      const panelClient = document.getElementById('panel-client');
-      const panelCand = document.getElementById('panel-candidate');
-
-      if (type === 'client') {
-        tabClient.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
-        tabClient.classList.remove('text-slate-600');
-        tabClient.setAttribute('aria-selected', 'true');
-
-        tabCand.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
-        tabCand.classList.add('text-slate-600');
-        tabCand.setAttribute('aria-selected', 'false');
-
-        panelClient.classList.remove('hidden');
-        panelCand.classList.add('hidden');
-      } else {
-        tabCand.classList.add('bg-white', 'text-slate-900', 'shadow-xs');
-        tabCand.classList.remove('text-slate-600');
-        tabCand.setAttribute('aria-selected', 'true');
-
-        tabClient.classList.remove('bg-white', 'text-slate-900', 'shadow-xs');
-        tabClient.classList.add('text-slate-600');
-        tabClient.setAttribute('aria-selected', 'false');
-
-        panelCand.classList.remove('hidden');
-        panelClient.classList.add('hidden');
-      }
-    }
-
-    function handleResumeSelected(input) {
-      const badge = document.getElementById('resume-filename-badge');
-      const label = document.getElementById('resume-filename-text');
-      if (input.files && input.files.length > 0) {
-        label.textContent = input.files[0].name;
-        badge.classList.remove('hidden');
-      } else {
-        badge.classList.add('hidden');
-      }
-    }
-
-    function validateContact(str) {
-      const trimmed = str.trim();
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (emailRegex.test(trimmed)) return true;
-      const cleaned = trimmed.replace(/[\s\-\+\(\)]/g, '');
-      return cleaned.length >= 10 && cleaned.length <= 13 && /^\d+$/.test(cleaned);
-    }
-
-    function handleClientSubmit(e) {
-      e.preventDefault();
-
-      const nameInput = document.getElementById('client-name');
-      const companyInput = document.getElementById('client-company');
-      const contactInput = document.getElementById('client-contact');
-      const serviceInput = document.getElementById('client-service');
-      const notesInput = document.getElementById('client-notes');
-
-      let isValid = true;
-
-      const errName = document.getElementById('err-client-name');
-      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
-        errName.textContent = 'Please enter your full name.';
-        errName.classList.remove('hidden');
-        nameInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        errName.classList.add('hidden');
-        nameInput.classList.remove('border-red-500');
-      }
-
-      const errCompany = document.getElementById('err-client-company');
-      if (!companyInput.value.trim() || companyInput.value.trim().length < 2) {
-        errCompany.textContent = 'Please enter your company name and city.';
-        errCompany.classList.remove('hidden');
-        companyInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        errCompany.classList.add('hidden');
-        companyInput.classList.remove('border-red-500');
-      }
-
-      const errContact = document.getElementById('err-client-contact');
-      if (!contactInput.value.trim() || !validateContact(contactInput.value)) {
-        errContact.textContent = 'Please enter a valid work email or 10-digit mobile number.';
-        errContact.classList.remove('hidden');
-        contactInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        errContact.classList.add('hidden');
-        contactInput.classList.remove('border-red-500');
-      }
-
-      const errService = document.getElementById('err-client-service');
-      if (!serviceInput.value) {
-        errService.textContent = 'Please select a consulting focus area.';
-        errService.classList.remove('hidden');
-        serviceInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        errService.classList.add('hidden');
-        serviceInput.classList.remove('border-red-500');
-      }
-
-      if (!isValid) return;
-
-      const rawText = `Hello Prem Consultants,\nI would like to schedule a strategic discovery discussion.\n\n*Name:* ${nameInput.value.trim()}\n*Company:* ${companyInput.value.trim()}\n*Contact:* ${contactInput.value.trim()}\n*Service:* ${serviceInput.value}\n*Notes:* ${notesInput.value.trim() || 'N/A'}`;
-      const waUrl = `https://wa.me/919423389525?text=${encodeURIComponent(rawText)}`;
-
-      const waLink = document.getElementById('client-whatsapp-link');
-      if (waLink) waLink.href = waUrl;
-
-      const alertBox = document.getElementById('client-success-alert');
-      alertBox.classList.remove('hidden');
-      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      const btn = document.getElementById('btn-submit-client');
-      btn.textContent = '✔ Request Submitted';
-      btn.classList.add('bg-slate-700', 'cursor-not-allowed');
-      btn.disabled = true;
-    }
-
-    function handleCandidateSubmit(e) {
-      e.preventDefault();
-
-      const nameInput = document.getElementById('cand-name');
-      const contactInput = document.getElementById('cand-contact');
-      const roleInput = document.getElementById('cand-role');
-      const expInput = document.getElementById('cand-exp');
-      const fileInput = document.getElementById('cand-resume');
-
-      let isValid = true;
-
-      const errName = document.getElementById('err-cand-name');
-      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
-        errName.textContent = 'Please enter your full name.';
-        errName.classList.remove('hidden');
-        nameInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        errName.classList.add('hidden');
-        nameInput.classList.remove('border-red-500');
-      }
-
-      const errContact = document.getElementById('err-cand-contact');
-      if (!contactInput.value.trim() || !validateContact(contactInput.value)) {
-        errContact.textContent = 'Please enter a valid phone number or email.';
-        errContact.classList.remove('hidden');
-        contactInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        errContact.classList.add('hidden');
-        contactInput.classList.remove('border-red-500');
-      }
-
-      const errRole = document.getElementById('err-cand-role');
-      if (!roleInput.value.trim() || roleInput.value.trim().length < 2) {
-        errRole.textContent = 'Please specify your target functional role.';
-        errRole.classList.remove('hidden');
-        roleInput.classList.add('border-red-500');
-        isValid = false;
-      } else {
-        errRole.classList.add('hidden');
-        roleInput.classList.remove('border-red-500');
-      }
-
-      const errResume = document.getElementById('err-cand-resume');
-      if (!fileInput.files || fileInput.files.length === 0) {
-        errResume.textContent = 'Please attach your CV / Resume document.';
-        errResume.classList.remove('hidden');
-        isValid = false;
-      } else {
-        errResume.classList.add('hidden');
-      }
-
-      if (!isValid) return;
-
-      const rawText = `Hello Deepali Jain & Prem Consultants Talent Team,\nI have submitted my profile for your candidate portal (100% Free Placement).\n\n*Name:* ${nameInput.value.trim()}\n*Target Role:* ${roleInput.value.trim()}\n*Contact:* ${contactInput.value.trim()}\n*Experience:* ${expInput.value.trim() || 'Not specified'}`;
-      const waUrl = `https://wa.me/919423389525?text=${encodeURIComponent(rawText)}`;
-
-      const waLink = document.getElementById('candidate-whatsapp-link');
-      if (waLink) waLink.href = waUrl;
-
-      const alertBox = document.getElementById('candidate-success-alert');
-      alertBox.classList.remove('hidden');
-      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      const btn = document.getElementById('btn-submit-cand');
-      btn.textContent = '✔ Application Submitted';
-      btn.classList.add('bg-slate-700', 'cursor-not-allowed');
-      btn.disabled = true;
-    }
-
-    // Mobile Menu & Scroll
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('menu-icon-open');
-    const iconClose = document.getElementById('menu-icon-close');
-
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-        menuBtn.setAttribute('aria-expanded', !isExpanded);
-        mobileMenu.classList.toggle('hidden');
-        iconOpen.classList.toggle('hidden');
-        iconClose.classList.toggle('hidden');
-      });
-    }
-
-    function closeMobileMenu() {
-      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.add('hidden');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        iconOpen.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-      }
-    }
-
-    document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
-            if (link.getAttribute('href') === `#${id}`) {
-              link.classList.add('text-[#2B3990]', 'font-bold', 'bg-slate-100/80');
-              link.classList.remove('text-slate-700');
-            } else {
-              link.classList.remove('text-[#2B3990]', 'font-bold', 'bg-slate-100/80');
-              link.classList.add('text-slate-700');
-            }
-          });
-        }
-      });
-    }, { threshold: 0.3 });
-
-    sections.forEach(sec => observer.observe(sec));
-
-    function initAll() {
-      initScrollProgress();
-      initCounters();
-      initSlideAndStick();
-      initMagneticButtons();
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initAll);
-    } else {
-      initAll();
-    }
-  </script>
-
-  <!-- ===== SEAMLESS MARQUEE ENGINE ===== -->
-  <script>
-    (function () {
-      function initMarquee() {
-        var inner = document.getElementById('marquee-inner');
-        if (!inner) return;
-
-        // Remove old Tailwind animation class that used -50% (wrong for unequal sets)
-        inner.classList.remove('animate-marquee');
-        inner.style.animation = 'none';
-        inner.style.transform = 'translateX(0)';
-
-        // Give every direct child item consistent gap via margin-right
-        // (the parent no longer uses space-x so we control it per item)
-        var items = inner.children;
-        var GAP = 48; // px, matches sm:space-x-12 (3rem = 48px)
-        for (var i = 0; i < items.length; i++) {
-          items[i].style.marginRight = GAP + 'px';
-          items[i].style.display = 'inline-flex';
-          items[i].style.flexShrink = '0';
-        }
-
-        // Measure total width = first half (Set 1, 7 items)
-        // Set 1 = first 7 children, Set 2 = next 7 children (exact duplicates)
-        var totalItems = items.length; // should be 14
-        var halfCount = totalItems / 2;
-        var halfWidth = 0;
-        for (var j = 0; j < halfCount; j++) {
-          halfWidth += items[j].offsetWidth + GAP;
-        }
-
-        // Animate: translate from 0 to -halfWidth, then snap back to 0 instantly
-        var pos = 0;
-        var speed = 0.6; // pixels per frame (~36s for full loop at 60fps)
-        var raf;
-
-        function tick() {
-          pos -= speed;
-          if (pos <= -halfWidth) {
-            pos = 0; // seamless snap: Set2 is identical so it looks continuous
-          }
-          inner.style.transform = 'translateX(' + pos + 'px)';
-          raf = requestAnimationFrame(tick);
-        }
-
-        // Pause on hover
-        var track = document.getElementById('marquee-track');
-        if (track) {
-          track.addEventListener('mouseenter', function () { cancelAnimationFrame(raf); });
-          track.addEventListener('mouseleave', function () { raf = requestAnimationFrame(tick); });
-        }
-
-        raf = requestAnimationFrame(tick);
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMarquee);
-      } else {
-        initMarquee();
-      }
-    })();
-  </script>
+  <noscript>
+    <div class="p-4 bg-amber-50 text-amber-800 text-center font-bold">
+      JavaScript is required for interactive features and dynamic applications on this site.
+    </div>
+  </noscript>
 </body>
 
 </html>
